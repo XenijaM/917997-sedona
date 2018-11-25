@@ -7,62 +7,63 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-        <a href="#" class="main-header-logo"><img src="img/main.logo.svg" width="140" height="71" alt="лого"></a>
+        <a href="#" class="main-header-logo"><img src="img/main.logo.svg" width="140" height="71" alt="лого city of sedona"></a>
         <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
+          <li><a href="#" aria-label="ссылка ведет к блоку информация">Информация</a></li>
+          <li><a href="#" aria-label="ссылка ведет к фото и видео">Фото и видео</a></li>
+          <li><a href="#" aria-label="ссылка ведет к карте штата">Карта штата</a></li>
+          <li><a href="#" aria-label="ссылка ведет к списку гостиниц">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main class="container">
       <h1 class="visually-hidden">Поиск подходящего жилья</h1>
       <!--Здесь будет часть с введением данных по поиску-->
-      <h2 class="visually-hidden">Результаты поиска подхоящего отеля</h2>
+
       <section class="catalog">
+         <h2 class="visually-hidden">Результаты поиска подхоящего отеля</h2>
          <ul class="catalog-list">
             <li class="catalog-item">
-               <a href="#"><img src="img/img-hotels/hotel1.jpg" width="135px" height="90px" alt="фото гостиницы" width="50" height="40"></a> <!--При нажатии на фото будет показана полная версия-->
+               <a href="#"><img src="img/img-hotels/hotel1.jpg" width="135px" height="90px" alt="фото гостиницы" ></a> <!--При нажатии на фото будет показана полная версия-->
                <h3 class="item-name">Amara Resort & SPA</h3>
-               <span class="item-type">Гостиница</span>
-               <span class="item-price">от 4000 р.</span>
-               <a href="#" class="button detailed">Подробнее</a>
+               <p class="item-type">Гостиница</p>
+               <p class="item-price">от 4000 р.</p>
+               <p><a href="#" class="button detailed" aria-label="ссылка ведет к подробной информации о гостинице">Подробнее</a></p>
                <button name="button" type="submit" class="reservation-button">Забронировать</button>
-               <span class="rate">Рейтинг: 8,5</span>
+               <p class="rate">Рейтинг: 8,5</p>
             </li>
             <li class="catalog-item">
-               <a href="#"><img src="img/img-hotels/hotel2.jpg" width="135px" height="90px" alt="фото гостиницы" width="50" height="40"></a> <!--При нажатии на фото будет показана полная версия-->
+               <a href="#"><img src="img/img-hotels/hotel2.jpg" width="135px" height="90px" alt="фото гостиницы"></a> <!--При нажатии на фото будет показана полная версия-->
                <h3 class="item-name">Desert Quail Inn</h3>
-               <span class="item-type">Мотель</span>
-               <span class="item-price">от 3000р.</span>
-               <a href="#" class="button detailed">Подробнее</a>
+               <p class="item-type">Мотель</p>
+               <p class="item-price">от 3000р.</p>
+               <p><a href="#" class="button detailed" aria-label="ссылка ведет к подробной информации о мотеле">Подробнее</a></p>
                <button name="button" type="submit" class="reservation-button">Забронировать</button>
-               <span class="rate">Рейтинг: 8,9</span>
+               <p class="rate">Рейтинг: 8,9</p>
             </li>
             <li class="catalog-item">
-               <a href="#"><img src="img/img-hotels/hotel3.jpg" width="135px" height="90px" alt="фото гостиницы" width="50" height="40"></a> <!--При нажатии на фото будет показана полная версия-->
+               <a href="#"><img src="img/img-hotels/hotel3.jpg" width="135px" height="90px" alt="фото гостиницы"></a> <!--При нажатии на фото будет показана полная версия-->
                <h3 class="item-name">Villas at poco diablo</h3>
-               <span class="item-type">Апартаменты</span>
-               <span class="item-price">от 2000 р.</span>
-               <a href="#" class="button detailed">Подробнее</a>
+               <p class="item-type">Апартаменты</p>
+               <p class="item-price">от 2000 р.</p>
+               <p><a href="#" class="button detailed" aria-label="ссылка ведет к подробной информации об апартаментах">Подробнее</a></p>
                <button name="button" type="submit" class="reservation-button">Забронировать</button>
-               <span class="rate">Рейтинг: 9,2</span>
+               <p class="rate">Рейтинг: 9,2</p>
             </li>
          </ul>
       </section>
     </main>
-  <footer class="main-footer">
-    <p><a href="#">#VISITSEDONA</a></p>
-    <ul class="footer-social">
-      <li><a href="#" class="social-button">Twitter</a></li>
-      <li><a href="#" class="social-button">Facebook</a></li>
-      <li><a href="#" class="social-button">Youtube</a></li>
-    </ul>
-    <p class="footer-copyright">
-      <span class="copyright">Website by</span>
-      <a href="#" class="button"><img src="img/logo-name.png" alt="Лого HTML-Академии" width="115" height="41"></a> <!--Не уверена, как правильно прописать
-      этот элемент-->
+    <footer class="main-footer">
+      <p><a href="#" aria-label="ссылка ведет к ??? ">#VISITSEDONA</a></p><!--Куда ведет эта ссылка? Или это не ссылка?-->
+      <ul class="footer-social">
+        <li><a href="#" class="social-button" aria-label="ссылка ведет к странице Седоны в твиттер">Twitter</a></li>
+        <li><a href="#" class="social-button" aria-label="ссылка ведет к странице Седоны в фейсбук">Facebook</a></li>
+        <li><a href="#" class="social-button" aria-label="ссылка ведет к странице Седоны на ютьюб">Youtube</a></li>
+      </ul>
+      <p class="footer-copyright">
+        <span class="copyright">Website by</span>
+        <a href="#" class="button"><img src="img/logo-name.png" alt="Лого HTML-Академии" width="115" height="41"></a> <!--Не уверена, как правильно прописать
+        этот элемент-->
     </p>
   </footer>
   </body>

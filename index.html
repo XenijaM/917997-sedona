@@ -7,12 +7,12 @@
   <body>
     <header class="main-header">
       <nav class="main-navigation">
-         <a href="#" class="main-header-logo"><img src="img/main.logo.svg" width="140" height="71" alt="лого"></a>
+         <a href="#" class="main-header-logo"><img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona"></a>
         <ul class="site-navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
+          <li><a href="#" aria-label="ссылка ведет к блоку информация">Информация</a></li>
+          <li><a href="#" aria-label="ссылка ведет к фото и видео">Фото и видео</a></li>
+          <li><a href="#" aria-label="ссылка ведет к карте штата">Карта штата</a></li>
+          <li><a href="#" aria-label="ссылка ведет к списку гостиниц">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -20,34 +20,57 @@
       <h1 class="page-title">
         <span class="welcome">welcome</span>
         <span class="to-the-gorgeous">to the gorgeous</span>
-        <span class="sedona">Sedona</span>
+        <span class="sedona">Sedona</span> <!--Или здесь h1 скрытый + изображение с текстом??-->
       </h1>
       <p>
         <b>"Because the Grand Canyon sucks"</b>
       </p>
       <div>
-        <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p>Рассотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <h2 class="visually-hidden">Почему стоит посетить Седону:</h2>
+        <b>Седона - небольшой городок в Аризоне, заслуживающий большего!</b>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
       <section>
-        <h2>Заинтересовались?</h2>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <!--Здесь будет форма-->
-          <span class="search-form-heading">Поиск гостиницы в Седоне</span>
-          <span>Дата заезда:</span>
-          <span>Дата выезда:</span>
-          <span>Взрослые:</span>
-          <span>Дети:</span>
+        <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
+        <b>Заинтересовались?</b>
+        <p class="search">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <form class="hotel-search" action="https://sedona.com" method="post">
+           <fieldset>
+             <legend>Поиск гостиницы в Седоне</legend>
+           <p>
+             <label for="arrival-date"><span class="search-item">Дата заезда:</span>
+                <input id="arrival-date" type="date" name="arrival" >
+             </label>
+          </p>
+           <p>
+             <label for="departure-date"><span class="search-item">Дата выезда:</span>
+                <input id="departure-date" type="date" name="departure" >
+             </label>
+          </p>
+          <div class="half-width">
+           <p>
+             <label for="adults-quantity"><span class="search-item">Взрослые:</span>
+                <input id="adults-quantity" type="number" min="1" max="20" name="adults" placeholder="2"> <!--Как сделать выбор количества кнопками?-->
+             </label>
+          </p>
+           <p>
+             <label for="kids-quantity"><span class="search-item">Дети:</span>
+                <input id="kids-quantity" type="number" min="0" max="20" name="kids" placeholder="0">
+             </label>
+          </p>
+       </div>
           <button class="search" type="button" name="button">Найти</button>
-          <img src="img/img-index/map.jpg" alt="map">
+        </fieldset>
+      </form>
+
       </section>
     </main>
   <footer class="main-footer">
-    <p><a href="#">#VISITSEDONA</a></p>
+    <p><a href="#" aria-label="ссылка ведет к ??? ">#VISITSEDONA</a></p><!--Куда ведет эта ссылка? Или это не ссылка?-->
     <ul class="footer-social">
-      <li><a href="#" class="social-button">Twitter</a></li>
-      <li><a href="#" class="social-button">Facebook</a></li>
-      <li><a href="#" class="social-button">Youtube</a></li>
+      <li><a href="#" class="social-button" aria-label="ссылка ведет к странице Седоны в твиттер">Twitter</a></li>
+      <li><a href="#" class="social-button" aria-label="ссылка ведет к странице Седоны в фейсбук">Facebook</a></li>
+      <li><a href="#" class="social-button" aria-label="ссылка ведет к странице Седоны на ютьюб">Youtube</a></li>
     </ul>
     <p class="footer-copyright">
       <span class="copyright">Website by</span>
