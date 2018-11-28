@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -17,22 +19,16 @@
       </nav>
     </header>
     <main class="container">
-      <h1 class="page-title">
-        <span class="welcome">welcome</span>
-        <span class="to-the-gorgeous">to the gorgeous</span>
-        <span class="sedona">Sedona</span> <!--Или здесь h1 скрытый + изображение с текстом??-->
-      </h1>
-      <p>
-        <b>"Because the Grand Canyon sucks"</b>
-      </p>
+      <h1 class="visually-hidden">ДОбро пожаловать в Седону</h1>
+      <div class="welcome-img"><img src="img/img-index/welcome.png" width="459px" height="353px" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks"></div>
       <div>
         <h2 class="visually-hidden">Почему стоит посетить Седону:</h2>
-        <b>Седона - небольшой городок в Аризоне, заслуживающий большего!</b>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <p class="sedona_deserves">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p class="sedona_reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
       <section>
         <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
-        <b>Заинтересовались?</b>
+        <b class="interest">Заинтересовались?</b>
         <p class="search">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <form class="hotel-search" action="https://sedona.com" method="post">
            <fieldset>
