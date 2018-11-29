@@ -72,3 +72,80 @@ a {
    text-align: center;
    line-height: 36px;
 }
+
+.item-name {
+   font-family: 'PT_Sans-Bold';
+   font-weight: bold;
+   font-style: normal;
+   font-size: "21px";
+   text-align: left;
+   line-height: 26px;
+   color: black;
+}
+
+.item-type
+.item-price {
+   font-family: 'PT_Sans-Regular';
+   font-weight: normal;
+   font-style: normal;
+   font-size: "14px";
+   text-align: left;
+   line-height: 21px;
+   color: black;
+}
+
+.button-detailed
+.reservation-button {
+   font-family: 'PT_Sans-Bold';
+   font-weight: bold;
+   font-style: normal;
+   font-size: "14px";
+   text-align: left;
+   line-height: 21px;
+   color: #ffffff;
+   background-color:
+}
+
+@font-face {
+    font-family: 'PT_Sans';
+    src: url('PT_Sans-Web-Regular.eot');
+    src: local('PT_Sans'), local('PT_Sans'),
+         url('PT_Sans-Web-Regular.eot?#iefix') format('embedded-opentype'),
+         url('PT_Sans-Web-Regular.woff') format('woff'),
+         url('PT_Sans-Web-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+        font-family: 'PT_Sans';
+        src: url('PT_Sans-Web-Bold.eot');
+        src: local('PT_Sans'), local('PT_Sans'),
+             url('PT_Sans-Web-Bold.eot?#iefix') format('embedded-opentype'),
+             url('PT_Sans-Web-Bold.woff') format('woff'),
+             url('PT_Sans-Web-Bold.ttf') format('truetype');
+         font-weight: bold;
+         font-style: normal;
+         }
+
+@font-face {
+         font-family: 'PT_Sans';
+         src: url('PT_Sans-Web-Bolditalic.eot');
+         src: local('PT_Sans'), local('PT_Sans'),
+             url('PT_Sans-Web-Bolditalic.eot?#iefixformat('embedded-opentype'),
+             url('PT_Sans-Web-Bolditalic.woff') format('woff'),
+             url('PT_Sans-Web-Bolditalic.ttf') format('truetype');
+         font-weight: bold;
+         font-style: italic;
+            }
+
+@font-face {
+         font-family: 'PT_Sans';
+         src: url('PT_Sans-Web-Italic.eot');
+         src: local('PT_Sans'), local('PT_Sans'),
+             url('PT_Sans-Web-Italic.eot?#iefixformat('embedded-opentype'),
+             url('PT_Sans-Web-Italic.woff') format('woff'),
+             url('PT_Sans-Web-Italic.ttf') format('truetype');
+         font-weight: normal;
+         font-style: italic;
+      }
