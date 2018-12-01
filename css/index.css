@@ -5,7 +5,7 @@
    url("../fonts/PTSans-Web-Regular.ttf") format("truetype");
    font-style: normal;
    font-weight: normal;
-} /***Зачем оно здесь нужно? Если весь font-face подключен сверху*/
+} /**Зачем оно здесь нужно? Если весь font-face подключен сверху. Кстати, когда убераю import, ничего не меняется.**/
 
 .visually-hidden {
    position:absolute;
@@ -89,8 +89,19 @@ a {
    font-size: 21px;
    text-align: left;
    line-height: 26px;
-   color: black;
+   color: #black;
 }
+
+.item-name a:hover {
+  color: #black;
+}
+
+.item-name a:focus {
+   color: #81b3d2;
+}
+.item-name a:active {
+   color: rgba(0, 0, 0, 0.3);
+} /**почему не сработало?**/
 
 .item-type
 .item-price {
