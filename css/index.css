@@ -1,5 +1,11 @@
-@import src (fonts/font-face.css)
+@import url("../fonts/font-face.css")
 
+@font-face {
+   font-family: "PTSans";
+   url("../fonts/PTSans-Web-Regular.ttf") format("truetype");
+   font-style: normal;
+   font-weight: normal;
+} /***Зачем оно здесь нужно? Если весь font-face подключен сверху*/
 
 .visually-hidden {
    position:absolute;
@@ -21,29 +27,22 @@
    display: none;
 }
 
-@font-face {
-   font-family: "PT_Sans";
-   url("fonts/PT_Sans-Web-Bold.ttf") format("truetype");
-   font-style: normal;
-   font-weight: normal;
-}
-
 body {
-   font-family: 'PT Sans', sans-serif;
+   font-family: "PTSans", sans-serif;
    font-size: 16px;
    text-transform: uppercase;
-
    background-color: #9FBFDF;
-      }
+}
 
 .main-body {
-   background-image: src ("/img/img-index/background-main.jpg")
+   background-color: #9FBFDF;
+   background-image: url("../img/img-index/background-main.jpg");
    background-repeat: no-repeat;
    background-attachment: fixed;
-      } /*Не понимаю, почему не сработало: ведь правило находится после правила для body*/
+}
 
 .site-navigation {
-   font-family: "PT_Sans";
+   font-family: "PTSans";
    font-size: 14px;
    text-align: center;
    line-height: 26px;
@@ -74,16 +73,17 @@ a {
 }
 
 .interest {
-   font-family: "PT_Sans_Regular";
-   url("fonts/PT_Sans-Web-Regular.ttf") format("truetype");
+   font-family: "PTSans";
    font-size: 30px;
    color: black;
+   font-style: normal;
+   font-weight: bold;
    text-align: center;
    line-height: 36px;
 }
 
 .item-name {
-   font-family: 'PT_Sans-Bold';
+   font-family: "PTSans";
    font-weight: bold;
    font-style: normal;
    font-size: 21px;
@@ -94,7 +94,7 @@ a {
 
 .item-type
 .item-price {
-   font-family: 'PT_Sans-Regular';
+   font-family: "PTSans";
    font-weight: normal;
    font-style: normal;
    font-size: 14px;
@@ -105,7 +105,7 @@ a {
 
 .button-detailed
 .reservation-button {
-   font-family: 'PT_Sans-Bold';
+   font-family: "PTSans";
    font-weight: bold;
    font-style: normal;
    font-size: 14px;
@@ -113,4 +113,9 @@ a {
    line-height: 21px;
    color: #ffffff;
    background-color:
+}
+
+.catalog-item {
+   style: none;
+   text-decoration: none;
 }
