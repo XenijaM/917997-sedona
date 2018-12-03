@@ -1,11 +1,19 @@
 @import url("../fonts/font-face.css")
 
-@font-face {
-   font-family: "PTSans";
-   url("../fonts/PTSans-Web-Regular.ttf") format("truetype");
-   font-style: normal;
-   font-weight: normal;
-} /**Зачем оно здесь нужно? Если весь font-face подключен сверху. Кстати, когда убераю import, ничего не меняется.**/
+
+.main-navigation {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   width: auto;
+}
+
+.site-navigation {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   width: auto;
+}
 
 .visually-hidden {
    position:absolute;
@@ -18,7 +26,7 @@
    overflow: hidden;
 }
 
-.a :hover {
+a :hover {
    outline: 0;
    box-shadow: 0 0 0 3px red;
 }
@@ -89,15 +97,14 @@ a {
    font-size: 21px;
    text-align: left;
    line-height: 26px;
-   color: #black;
 }
 
 .item-name a:hover {
-  color: #black;
+  color: #81b3d2;
 }
 
 .item-name a:focus {
-   color: #81b3d2;
+   color: #black;
 }
 .item-name a:active {
    color: rgba(0, 0, 0, 0.3);
