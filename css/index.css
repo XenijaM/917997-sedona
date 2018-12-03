@@ -8,13 +8,56 @@
    width: auto;
 }
 
+.catalog-list {
+   display: flex;
+   flex-direction: column;
+}
+
 .site-navigation {
    display: flex;
    flex-direction: row;
    justify-content: space-around;
    width: auto;
+   background-color: white;
 }
 
+.main-footer {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   width: auto;
+   background-color: white;
+} /*Знаю, что голубая полоса над хэдером - это выпадение маргина. Только какого ..*/
+
+.footer-social {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: auto;
+}
+
+/**.social li {
+   text-align: center;
+   width: 46px;
+   height: 48px;
+   background-color: #ffffff;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.social-tw {
+   background-image: url(twitter-icon.svg);
+}
+
+.social-fb {
+   background-image: url(fb-icon.svg);
+}
+
+.social-yt {
+   background-image: url(utube-icon.svg);
+}
+**/
 .visually-hidden {
    position:absolute;
    width: 1px;
@@ -24,6 +67,20 @@
    padding: 0;
    clip: rect (0 0 0 0);
    overflow: hidden;
+}
+
+.welcome-img {
+   display: block;
+   text-align: center;
+   padding-top: 50px;
+}
+
+.interest-search {
+   display: block;
+   text-align: center;
+   width: 434px;
+   height: 96px;
+   margin: auto;
 }
 
 a :hover {
