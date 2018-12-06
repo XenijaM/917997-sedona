@@ -10,27 +10,34 @@
   <body class="main-body">
      <header class="main-header">
        <ul class="site-navigation">
-          <li><a href="#" aria-label="ссылка ведет к блоку информация">Информация</a></li>
-          <li><a href="#" aria-label="ссылка ведет к фото и видео">Фото и видео</a></li>
-          <li><a href="#" class="main-header-logo"><img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona"></a></li>
-          <li><a href="#" aria-label="ссылка ведет к карте штата">Карта штата</a></li>
-          <li><a href="#" aria-label="ссылка ведет к списку гостиниц">Гостиницы</a></li>
+          <li><a href="#" aria-label="ссылка ведет к блоку информация" class="site-nav">Информация</a></li>
+          <li><a href="#" aria-label="ссылка ведет к фото и видео" class="site-nav">Фото и видео</a></li>
+          <li><a href="#" class="main-header-logo" class="site-nav"><img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona"></a></li>
+          <li><a href="#" aria-label="ссылка ведет к карте штата" class="site-nav">Карта штата</a></li>
+          <li><a href="#" aria-label="ссылка ведет к списку гостиниц" class="site-nav">Гостиницы</a></li>
        </ul>
    </header>
     <main class="container">
+      <div class="section-welcome">
       <h1 class="visually-hidden">ДОбро пожаловать в Седону</h1>
       <div class="welcome-img"><img src="img/img-index/welcome.png" width="459px" height="353px" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks"></div>
-      <div>
+      </div>
+      <div class="img-polygon">
+         <img src="img/img-index/polygon.svg">
+      </div>
+      <div class="sedona-white">
         <h2 class="visually-hidden">Почему стоит посетить Седону:</h2>
-        <p class="sedona_deserves">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
-        <p class="sedona_reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <div class="deserve">
+          <p class="sedona_deserves">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="sedona_reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+       </div>
       </div>
       <section>
         <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
-      <div class="interest-search">
+       <div class="interest-search">
         <p class="interest">Заинтересовались?</p>
         <p class="search">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-     </div>
+      </div>
         <form class="hotel-search" action="https://sedona.com" method="post">
            <fieldset>
              <legend>Поиск гостиницы в Седоне</legend>
@@ -63,7 +70,8 @@
       </section>
     </main>
   <footer class="main-footer">
-    <p><a href="#" aria-label="#">#VISITSEDONA</a></p>
+    <p
+    ><a href="#" aria-label="#">#VISITSEDONA</a></p>
     <ul class="footer-social">
       <li><a href="#" class="social social-tw" aria-label="ссылка ведет к странице Седоны в твиттер"></a></li>
       <li><a href="#" class="social social-fb" aria-label="ссылка ведет к странице Седоны в фейсбук"></a></li>

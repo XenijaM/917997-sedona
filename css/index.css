@@ -1,5 +1,28 @@
-@import url("../fonts/font-face.css")
 
+.section-welcome {
+   background-image: url("../img/img-index/background-main.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100%;
+}
+
+.img-polygon {
+   width: 100%;
+}
+
+.sedona-white {
+   background-color: white;
+   height: 216px;
+   text-align: center;
+}
+
+.deserve {
+   display: inline-block;
+   margin-top: 61px;
+   margin-bottom: 107px;
+   margin-left: 380px;
+   margin-right: 380px;
+}
 
 .main-navigation {
    display: flex;
@@ -8,17 +31,19 @@
    width: auto;
 }
 
-.catalog-list {
-   display: flex;
-   flex-direction: column;
-}
-
 .site-navigation {
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
+   justify-content: space-around; /*Почему отступ слева больше оказался?*/
    width: auto;
    background-color: white;
+}
+
+.site-nav {
+   font-family: "PT Sans", Arial, sans-serif;
+   font-size: 14px;
+   color: #000000;
+   font-weight: bold;
 }
 
 .main-footer {
@@ -27,14 +52,13 @@
    justify-content: space-around;
    width: auto;
    background-color: white;
-} /*Знаю, что голубая полоса над хэдером - это выпадение маргина. Только какого ..*/
+} /*Знаю, что голубая полоса над хэдером - это выпадание маргина. Только какого ..*/
 
-.footer-social {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   width: auto;
-}
+.social {
+   display: inline-block;
+   vertical-align: bottom;
+} /*???*/
+
 
 /**.social li {
    text-align: center;
@@ -75,14 +99,6 @@
    padding-top: 50px;
 }
 
-.interest-search {
-   display: block;
-   text-align: center;
-   width: 434px;
-   height: 96px;
-   margin: auto;
-}
-
 a :hover {
    outline: 0;
    box-shadow: 0 0 0 3px red;
@@ -93,21 +109,18 @@ a :hover {
 }
 
 body {
-   font-family: "PTSans", sans-serif;
+   font-family: "PT Sans", Arial, sans-serif;
    font-size: 16px;
    text-transform: uppercase;
-   background-color: #9FBFDF;
+   background-color: white;
 }
 
 .main-body {
    background-color: #9FBFDF;
-   background-image: url("../img/img-index/background-main.jpg");
-   background-repeat: no-repeat;
-   background-attachment: fixed;
 }
 
 .site-navigation {
-   font-family: "PTSans";
+   font-family: "PT Sans", Arial, sans-serif;
    font-size: 14px;
    text-align: center;
    line-height: 26px;
@@ -126,8 +139,14 @@ a {
 }
 
  .sedona_deserves {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 440px;
+   height: 48px;
    font-size: 21px;
    color: black;
+   font-weight: bold;
    text-align: center;
 }
 
@@ -137,8 +156,16 @@ a {
    text-align: center;
 }
 
+.interest-search {
+   display: block;
+   text-align: center;
+   width: 434px;
+   height: 96px;
+   margin: auto;
+}
+
 .interest {
-   font-family: "PTSans";
+   font-family: "PT Sans", Arial, sans-serif;
    font-size: 30px;
    color: black;
    font-style: normal;
@@ -147,8 +174,16 @@ a {
    line-height: 36px;
 }
 
+.search {
+   font-family: "PT Sans", Arial, sans-serif;
+   font-size: 14px;
+   color: #333333;
+   line-height: 24px;
+   width: auto; /*Как правильно оформить перенос строки? Через br не хочется*/
+}
+
 .item-name {
-   font-family: "PTSans";
+   font-family: "PT Sans", Arial, sans-serif;
    font-weight: bold;
    font-style: normal;
    font-size: 21px;
@@ -169,18 +204,18 @@ a {
 
 .item-type
 .item-price {
-   font-family: "PTSans";
+   font-family: "PT Sans", Arial, sans-serif;
+   font-size: 14px;
+   color: black;
    font-weight: normal;
    font-style: normal;
-   font-size: 14px;
    text-align: left;
    line-height: 21px;
-   color: black;
 }
 
 .button-detailed
 .reservation-button {
-   font-family: "PTSans";
+   font-family: "PT Sans", Arial, sans-serif;
    font-weight: bold;
    font-style: normal;
    font-size: 14px;
@@ -188,6 +223,13 @@ a {
    line-height: 21px;
    color: #ffffff;
    background-color:
+}
+
+.visit {
+   font-family: "PT Sans", Arial, sans-serif;
+   font-size: 21px;
+   color: #000000; /*Почему цвет не изменился на черный?*/
+   font-weight: bold;
 }
 
 .catalog-item {
