@@ -1,27 +1,22 @@
 
+body {
+   font-family: "PT Sans", Arial, sans-serif;
+   font-size: 16px;
+   text-transform: uppercase;
+   background-color: white;
+   margin-right: 40px;
+   margin-left: 40px;
+   height: 100%;
+}
+
+.main-body {
+}
+
 .section-welcome {
    background-image: url("../img/img-index/background-main.jpg");
    background-repeat: no-repeat;
-   background-attachment: fixed;
    background-size: 100%;
-}
-
-.img-polygon {
-   width: 100%;
-}
-
-.sedona-white {
-   background-color: white;
-   height: 216px;
-   text-align: center;
-}
-
-.deserve {
-   display: inline-block;
-   margin-top: 61px;
-   margin-bottom: 107px;
-   margin-left: 380px;
-   margin-right: 380px;
+   height: 493px;
 }
 
 .main-navigation {
@@ -34,54 +29,79 @@
 .site-navigation {
    display: flex;
    flex-direction: row;
-   justify-content: space-around; /*Почему отступ слева больше оказался?*/
+   justify-content: space-around; /*Надо править, отступы неверные*/
    width: auto;
    background-color: white;
+   margin: 0px;
+   height: 56px;
 }
 
 .site-nav {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around; /*Надо править, отступы неверные*/
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 14px;
    color: #000000;
    font-weight: bold;
 }
 
-.main-footer {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   width: auto;
-   background-color: white;
-} /*Знаю, что голубая полоса над хэдером - это выпадание маргина. Только какого ..*/
+.li-center {
+   padding-top: 22px;
+   padding-bottom: 22px;
+   color: black;
+}
 
-.social {
-   display: inline-block;
-   vertical-align: bottom;
-} /*???*/
+.img-polygon {
+   width: 100%;
+   background-color: transparent;    /*почему фон остался голубым? Пока не знаю, как сделать.*/
+   margin-bottom: -4px;
+}
 
+.sedona-deserves {
+   height: 216px;
+   width: 100%;
+   margin: 0;
+   background-color: cyan;
+}
 
-/**.social li {
-   text-align: center;
-   width: 46px;
+.s-deserves {
+   display: block;
+   width: 440px;
    height: 48px;
-   background-color: #ffffff;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
+   margin-top: 61px;
+   padding-top: 61px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
-.social-tw {
-   background-image: url(twitter-icon.svg);
+.s-reasons {
+   display: block;
+   width: 489px;
+   height: 13px;
+   margin-top: 38px;
+   margin-bottom: 56px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0px;
 }
 
-.social-fb {
-   background-image: url(fb-icon.svg);
+ .deserves {
+   font-family: "PT Sans", Arial, sans-serif;
+   font-size: 21px;
+   color: black;
+   font-weight: bold;
+   text-align: center;
 }
 
-.social-yt {
-   background-image: url(utube-icon.svg);
+ .reasons {
+   font-family: "PT Sans", Arial, sans-serif;
+   font-size: 14px;
+   display: block;
+   color: #333333;
+   text-align: center;
 }
-**/
+
 .visually-hidden {
    position:absolute;
    width: 1px;
@@ -95,8 +115,10 @@
 
 .welcome-img {
    display: block;
-   text-align: center;
-   padding-top: 50px;
+   width: 459px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 76px;
 }
 
 a :hover {
@@ -106,17 +128,6 @@ a :hover {
 
 .hotel-search {
    display: none;
-}
-
-body {
-   font-family: "PT Sans", Arial, sans-serif;
-   font-size: 16px;
-   text-transform: uppercase;
-   background-color: white;
-}
-
-.main-body {
-   background-color: #9FBFDF;
 }
 
 .site-navigation {
@@ -138,48 +149,42 @@ a {
   margin: 0 auto;
 }
 
- .sedona_deserves {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   width: 440px;
-   height: 48px;
-   font-size: 21px;
-   color: black;
-   font-weight: bold;
-   text-align: center;
-}
-
- .sedona_reasons {
-   font-size: 14px;
-   color: #333333;
-   text-align: center;
-}
-
 .interest-search {
+   width: auto;
+   height: 298px;
+   margin-top: 0; /*откуда сверху отступ?*/
+   background-color: antiquewhite;
+}
+
+.search {
    display: block;
-   text-align: center;
    width: 434px;
    height: 96px;
-   margin: auto;
+   margin-top: 57px; /*почему margin-top не добавил отступ?*/
+   margin-bottom: 145px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 57px;
 }
 
-.interest {
+.s-interest {
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 30px;
    color: black;
    font-style: normal;
    font-weight: bold;
-   text-align: center;
    line-height: 36px;
+   text-align: center;
+   width: 100%;
 }
 
-.search {
+.s-search {
    font-family: "PT Sans", Arial, sans-serif;
-   font-size: 14px;
+   font-size: 14px; /*почему не поместилось в боксе?*/
    color: #333333;
    line-height: 24px;
-   width: auto; /*Как правильно оформить перенос строки? Через br не хочется*/
+   width: auto;
+   text-align: center;
 }
 
 .item-name {
@@ -200,7 +205,7 @@ a {
 }
 .item-name a:active {
    color: rgba(0, 0, 0, 0.3);
-} /**почему не сработало?**/
+} /*почему не сработало?*/
 
 .item-type
 .item-price {
@@ -225,14 +230,125 @@ a {
    background-color:
 }
 
+/* footer style */
+
+.main-footer {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+   width: auto;
+   background-color: white;
+   flex: 1 0 auto; /*пыталась прижать футер*/
+} 
+
 .visit {
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 21px;
-   color: #000000; /*Почему цвет не изменился на черный?*/
+   color: #000000;
    font-weight: bold;
 }
 
+.footer-social {
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+}
+
+.social {
+   display: inline-block;
+   vertical-align: bottom;
+}
+.footer-copyright {
+  display: flex; 
+  align-items: center;
+}
+.copyright {
+   padding-right: 8px;
+}
+
+/**.social li {
+   text-align: center;
+   width: 46px;
+   height: 48px;
+   background-color: #ffffff;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.social-tw {
+   background-image: url(twitter-icon.svg);
+}
+
+.social-fb {
+   background-image: url(fb-icon.svg);
+}
+
+.social-yt {
+   background-image: url(utube-icon.svg);
+}
+**/
+
+
+
+/*Styles for the inner page*/
+
+.catalog-list {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   margin-top: 86px;
+}
 .catalog-item {
+   display: flex;
    style: none;
    text-decoration: none;
+   align-content: space-between;
+   justify-content: space-between;
+   height: 151px;
 }
+.actions {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: 258px;
+   margin-right: 705px; /*как это сделать без указания px?ведь всё поедет*/
+   margin-right: 353px;
+   margin-bottom: auto;
+   padding: auto;
+}
+.button-detailed {
+   width: 110px;
+   height: 27px;
+   backgorund-color: 
+}
+.reservation-button {
+   color: white;
+   width: 142px;
+   height: 27px;
+}
+.rate {
+   margin-right: 73px;
+}
+.foto {
+   justify-content: center;
+   margin: auto;
+}
+
+/*как прижать футер к полу - куда-то пропали социалки...*/
+body {
+   height: 100%;
+   min-width:900px;
+}
+html { 
+   position:relative; 
+   min-height:100%;
+  }
+footer {
+   height: 50px; 
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+  }

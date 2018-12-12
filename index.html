@@ -10,35 +10,35 @@
   <body class="main-body">
      <header class="main-header">
        <ul class="site-navigation">
-          <li><a href="#" aria-label="ссылка ведет к блоку информация" class="site-nav">Информация</a></li>
-          <li><a href="#" aria-label="ссылка ведет к фото и видео" class="site-nav">Фото и видео</a></li>
-          <li><a href="#" class="main-header-logo" class="site-nav"><img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona"></a></li>
-          <li><a href="#" aria-label="ссылка ведет к карте штата" class="site-nav">Карта штата</a></li>
-          <li><a href="#" aria-label="ссылка ведет к списку гостиниц" class="site-nav">Гостиницы</a></li>
+          <li class="site-nav"><a href="#" aria-label="ссылка ведет к блоку информация" class="li-center">Информация</a></li>
+          <li class="site-nav"><a href="#" aria-label="ссылка ведет к фото и видео" class="li-center">Фото и видео</a></li>
+          <li class="site-nav"><a href="#" class="main-header-logo"><img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona"></a></li>
+          <li class="site-nav"><a href="#" aria-label="ссылка ведет к карте штата" class="li-center">Карта штата</a></li>
+          <li class="site-nav"><a href="#" aria-label="ссылка ведет к списку гостиниц" class="li-center">Гостиницы</a></li>
        </ul>
    </header>
     <main class="container">
       <div class="section-welcome">
-      <h1 class="visually-hidden">ДОбро пожаловать в Седону</h1>
-      <div class="welcome-img"><img src="img/img-index/welcome.png" width="459px" height="353px" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks"></div>
+         <h1 class="visually-hidden">ДОБРО ПОЖАЛОВАТЬ В СЕДОНУ</h1>
+         <div class="welcome-img"><img src="img/img-index/welcome.png" width="459px" height="353px" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks"></div>
       </div>
       <div class="img-polygon">
-         <img src="img/img-index/polygon.svg">
+         <img src="img/img-index/polygon.svg" class="polygon">
       </div>
-      <div class="sedona-white">
+      <div class="sedona-deserves">
         <h2 class="visually-hidden">Почему стоит посетить Седону:</h2>
-        <div class="deserve">
-          <p class="sedona_deserves">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="sedona_reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-       </div>
+          <div class="s-deserves"><p class="deserves">Седона — небольшой городок в Аризоне, заслуживающий большего!</p></div>
+          <div class="s-reasons"><p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p></div>
       </div>
       <section>
-        <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
-       <div class="interest-search">
-        <p class="interest">Заинтересовались?</p>
-        <p class="search">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      </div>
-        <form class="hotel-search" action="https://sedona.com" method="post">
+        <div class="interest-search">
+          <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
+            <div class="search">
+              <p class="s-interest">Заинтересовались? </p>
+              <p class="s-search">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            </div>        
+        </div>
+          <form class="hotel-search" action="https://sedona.com" method="post">
            <fieldset>
              <legend>Поиск гостиницы в Седоне</legend>
            <p>
@@ -71,11 +71,11 @@
     </main>
   <footer class="main-footer">
     <p
-    ><a href="#" aria-label="#">#VISITSEDONA</a></p>
+    ><a href="#" aria-label="#" class="visit">#VISITSEDONA</a></p>
     <ul class="footer-social">
-      <li><a href="#" class="social social-tw" aria-label="ссылка ведет к странице Седоны в твиттер"></a></li>
-      <li><a href="#" class="social social-fb" aria-label="ссылка ведет к странице Седоны в фейсбук"></a></li>
-      <li><a href="#" class="social social-yt" aria-label="ссылка ведет к странице Седоны на ютьюб"></a></li>
+      <li><a href="#" class="social social-tw" aria-label="ссылка ведет к странице Седоны в твиттер"><img src="img/twitter-icon.svg"></a></li> <!--почему не отображаются значки?-->
+      <li><a href="#" class="social social-fb" aria-label="ссылка ведет к странице Седоны в фейсбук"><img src="img/fb-icon.svg"></a></li>
+      <li><a href="#" class="social social-yt" aria-label="ссылка ведет к странице Седоны на ютьюб"><img src="img/utube-icon.svg"></a></li>
     </ul>
     <p class="footer-copyright">
       <span class="copyright">Website by</span>
