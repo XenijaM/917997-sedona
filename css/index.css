@@ -8,24 +8,18 @@ body {
    margin-left: 40px;
    height: 100%;
 }
-
-.main-body {
-}
-
 .section-welcome {
    background-image: url("../img/img-index/background-main.jpg");
    background-repeat: no-repeat;
    background-size: 100%;
    height: 493px;
 }
-
 .main-navigation {
    display: flex;
    flex-direction: row;
    justify-content: space-around;
    width: auto;
 }
-
 .site-navigation {
    display: flex;
    flex-direction: row;
@@ -196,14 +190,14 @@ a {
    line-height: 26px;
 }
 
-.item-name a:hover {
+.item-name:hover {
   color: #81b3d2;
 }
 
-.item-name a:focus {
+.item-name:focus {
    color: #black;
 }
-.item-name a:active {
+.item-name:active {
    color: rgba(0, 0, 0, 0.3);
 } /*почему не сработало?*/
 
@@ -237,7 +231,7 @@ a {
    flex-direction: row;
    justify-content: space-around;
    align-items: center;
-   width: auto;
+   width: 100%;
    background-color: white;
    flex: 1 0 auto; /*пыталась прижать футер*/
 } 
@@ -267,7 +261,7 @@ a {
    padding-right: 8px;
 }
 
-/**.social li {
+.social li {
    text-align: center;
    width: 46px;
    height: 48px;
@@ -278,17 +272,17 @@ a {
 }
 
 .social-tw {
-   background-image: url(twitter-icon.svg);
+   background-image: url("../img/twitter-icon.svg");
 }
 
 .social-fb {
-   background-image: url(fb-icon.svg);
+   background-image: url("../img/fb-icon.svg");
 }
 
 .social-yt {
-   background-image: url(utube-icon.svg);
-}
-**/
+   background-image: url("../img/utube-icon.svg");
+} /*что с ними не так?*/
+
 
 
 
@@ -314,8 +308,8 @@ a {
    justify-content: space-between;
    flex-wrap: wrap;
    width: 258px;
-   margin-right: 705px; /*как это сделать без указания px?ведь всё поедет*/
-   margin-right: 353px;
+   margin-right: auto; /*как это сделать без указания px?ведь всё поедет*/
+   margin-left: 30px;
    margin-bottom: auto;
    padding: auto;
 }
