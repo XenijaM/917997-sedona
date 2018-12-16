@@ -1,12 +1,13 @@
 
+/*Все размеры сходятся на масштабе страницы 70%*/
 body {
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 16px;
    text-transform: uppercase;
-   background-color: white;
-   margin-right: 40px;
-   margin-left: 40px;
+   margin: 0;
    height: 100%;
+   background-color: yellowgreen; /*для наглядности*/
+   /*Откуда в всего боди, кроме хэдера, появился отсуп справа?*/
 }
 .section-welcome {
    background-image: url("../img/img-index/background-main.jpg");
@@ -14,88 +15,73 @@ body {
    background-size: 100%;
    height: 493px;
 }
-.main-navigation {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   width: auto;
-}
 .site-navigation {
    display: flex;
    flex-direction: row;
-   justify-content: space-around; /*Надо править, отступы неверные*/
-   width: auto;
+   justify-content: space-around; 
    background-color: white;
    margin: 0px;
    height: 56px;
+   width: 100%;
 }
-
 .site-nav {
    display: flex;
-   flex-direction: row;
-   justify-content: space-around; /*Надо править, отступы неверные*/
+   width: 239px;
+   margin: auto;
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 14px;
    color: #000000;
    font-weight: bold;
 }
-
-.li-center {
-   padding-top: 22px;
-   padding-bottom: 22px;
-   color: black;
+li:nth-child(3) {
+   width: 244px;
+   padding-top: 0;
 }
-
 .img-polygon {
-   width: 100%;
-   background-color: transparent;    /*почему фон остался голубым? Пока не знаю, как сделать.*/
-   margin-bottom: -4px;
+   /*position: absolute;*/
+   width: auto;
+   background-color: transparent;
+   margin-top: -42px; /*Таким способом img едет. Как спозиционировать абсолютно, приклеив к bottom section-welcome?*/
 }
-
 .sedona-deserves {
    height: 216px;
    width: 100%;
    margin: 0;
+   margin-top: -25px; /*Пока так. После абсолют.поз. img-polygon поправить.*/
    background-color: cyan;
 }
-
 .s-deserves {
    display: block;
    width: 440px;
    height: 48px;
-   margin-top: 61px;
-   padding-top: 61px;
    margin-left: auto;
    margin-right: auto;
-}
-
-.s-reasons {
-   display: block;
-   width: 489px;
-   height: 13px;
-   margin-top: 38px;
-   margin-bottom: 56px;
-   margin-left: auto;
-   margin-right: auto;
-   padding: 0px;
-}
-
- .deserves {
+   padding: 0;
+   padding-top: 60px;
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 21px;
    color: black;
    font-weight: bold;
    text-align: center;
+   background-color: bisque;
 }
-
- .reasons {
+.s-reasons {
+   display: block;
+   width: 489px;
+   height: 13px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0px;
+   margin-top: 38px;
+   background-color: azure;
    font-family: "PT Sans", Arial, sans-serif;
+   line-height: 13px;
    font-size: 14px;
    display: block;
    color: #333333;
    text-align: center;
+   background-color: rgb(212, 38, 38);
 }
-
 .visually-hidden {
    position:absolute;
    width: 1px;
@@ -106,7 +92,6 @@ body {
    clip: rect (0 0 0 0);
    overflow: hidden;
 }
-
 .welcome-img {
    display: block;
    width: 459px;
@@ -114,14 +99,315 @@ body {
    margin-right: auto;
    padding-top: 76px;
 }
+/*БЛОК В СЕРЕДИНЕ*/
+.center-section {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: flex-center;
+   align-items: stretch;
+   align-content: stretch;
+   width: 100%;
+   margin: 0; /*Откуда отсутп слева?*/
+   list-style: none;
+}
+.true-city {
+   width: 400px;
+   height: 256px;
+   margin: 0;
+   padding: 0;
+   background-color: #81b3d2;
+}
+.inside-box {
+   margin: 46px 60px 64px 60px;
+   background-color: #bfdbec;
+   width: 280px; /*Значение auto не сработало.*/
+   height: 146px;
+   padding: 0; /*Откуда нижний отступ?*/
+}
+.box-titel {
+   display: block;
+   line-height: 21px;
+   text-align: center;
+   font-size: 21px;
+   font-weight: bold;
+   color: white;
+}
+.box-number {
+   display: block;
+   line-height: 21px;
+   text-align: center;
+   font-size: 14px;
+   color: white;
+}
+.box-text {
+   display: block;
+   line-height: 21px;
+   text-align: center;
+   font-size: 14px;
+   color: white;
+   margin: 0;
+   background-color: #d13777;
+}
+.img-1 {
+   width: auto;
+   height: 256px;
+   margin: 0;
+   flex-grow: 1; /*Что лучше указывать - фикс. ширину в px или величину flex-grow? Прописывала также ширину - не сработало.*/
+   background-image: url("../img/img-index/background-city.jpg");
+   background-repeat: no-repeat;
+}
+.icon-area {
+   display: flex;
+   width: 100%;
+   height: 320px; /*Измерить точнее.*/
+   background-color: lemonchiffon;
 
+}
+.icon-area-item {
+   width: auto; /*Как сделать так, чтобы по ширине растянулись однородно?*/
+   margin: 0;
+}
+.second {
+   border: 2px solid red;
+}
+.icon-house {
+   display: block;
+   width: 75px;
+   height: 72px;
+   margin-left: 162px;
+   margin-right: 162px;
+   margin-top: 50px; /*Узнать точные px.*/
+   background-image: url(../img/img-index/icon-1.house.svg);  
+}
+.icon-food {
+   display: block;
+   width: 74px;
+   height: 70px;
+   margin-left: 162px;
+   margin-right: 162px;
+   margin-top: 50px; /*Узнать точные px.*/
+   background-image: url(../img/img-index/icon-3.food.svg); 
+}
+.icon-gift {
+   display: block;
+   width: 64px;
+   height: 76px;
+   margin-left: 162px;
+   margin-right: 162px;
+   margin-top: 50px; /*Узнать точные px.*/
+   background-image: url(../img/img-index/icon-2.gifts.svg);
+   background-repeat: no-repeat;
+}
+.icon-title {
+   display: inline-block;
+   width: 252px;
+   margin-left: 73px;
+   font-size: 21px;
+   line-height: 21px;
+   text-align: center;
+   background-color: #6a7de7;
+   font-weight: bold;
+   color: black;
+}
+.icon-description {
+   display: inline-block;
+   width: 252px;
+   margin-left: 73px;
+   font-size: 14px;
+   line-height: 21px;
+   text-align: center;
+   background-color: #6a7de7;
+   font-weight: bold;
+   color: #333333;
+}
+.img-2 { /*Когда ширине задавать точное значение в px, а когда autо?*/
+   width: 66%; /*Поставила авто, как в предыдущем случае, всё слетело. Ставила точное в px - 800px, */
+   height: 256px;
+   margin: 0;
+   background-image: url(../img/img-index/canyon.jpg);
+   background-color: #e1f33d;
+   background-repeat: no-repeat;
+}
+.devil-bridge {
+   width: 400px;
+   height: 256px;
+   margin: auto;
+   background-color: #81b3d2;
+   align-self: flex-end;
+}
+.advantages {
+   display: flex;
+   flex-wrap: nowrap;
+   width: 390px; /*По 400px не помещается.*/
+   height: 256px;
+}
+.second-ad {
+   border: 2px solid red;
+}
+.square {
+   width: 218px; /*Пришлось изменить ширину с 208, уменьшить отступ слева на 10, т.к. не вмещался текст. Почему?*/
+   height: 134px;
+   margin: 50px 97px 63px 85px;
+   background-color: rgb(136, 221, 157);
+}
+.road {
+   width: 272px; /*Также пришлось увеличить ширину на 10px, уменьшить отступы по бокам.*/
+   height: 142px;
+   margin: 50px 64px 64px 64px;
+   background-color: rgb(136, 221, 157);
+}
+.tourist {
+   width: 260px; /*Также пришлось увеличить ширину на 14px, уменьшить отступы по бокам.*/
+   height: 142px;
+   margin: 50px 70px 63px 70px;
+   background-color: rgb(136, 221, 157);
+}
+.box-titel-2 {
+   display: inline-block;
+   font-size: 21px;
+   line-height: 21px;
+   text-align: center;
+   width: 100%;
+   background-color: #6a7de7;
+   font-weight: bold;
+   color:#000000;
+}
+.number {
+   display: block;
+   line-height: 21px;
+   text-align: center;
+   font-size: 14px;
+   color: #333333;
+   padding-top: 22px; /*Узнать точно.*/
+}
+.box-text-2 {
+   display: block;
+   text-align: center;
+   font-size: 14px;
+   color: #333333;
+   padding-top: 22px; /*Узанть точно.*/
+}
+/*КОНЕЦ БЛОКА*/
+
+.interest-search {
+   width: auto;
+   height: 298px;
+   margin-top: 0;
+   background-color: antiquewhite;
+}
+.search {
+   width: 434px;
+   height: 96px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 27px;
+   background-color: aliceblue;
+}
+.s-interest {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 30px;
+   color: black;
+   font-style: normal;
+   font-weight: bold;
+   line-height: 36px;
+   text-align: center;
+   background-color: darkviolet;
+}
+.s-search {
+   width: auto;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 13px; /*почему не поместилось в боксе?*/
+   color: #333333;
+   line-height: 24px;
+   text-align: center;
+   background-color: gold;
+}
 a :hover {
    outline: 0;
    box-shadow: 0 0 0 3px red;
 }
+.img-map {
+   width: 100%;
+}
+
+/*вёрстка формы поиска гостиницы*/
 
 .hotel-search {
-   display: none;
+   position: absolute; /*скорректировать координаты*/
+   bottom: 170px;
+   left: 37%; /*Как можно задать точку объекта для сдвига?*/
+   width: 568px;
+   height: 481px;
+}
+.search-titel {
+   width: 100%;
+   height: 86px;
+   background-color: #766357;
+   color: #ffffff;
+   line-height: 26px;
+   size: 21px;
+   font-weight: bold;
+   text-align: center;
+}
+.s-titel {
+   color: #ffffff;
+   line-height: 18px;
+   size: 21px;
+   font-weight: bold;
+   text-align: center;
+   margin-right: auto;
+   margin-left: auto;
+   margin-top: 35px;
+}
+.search-form{ /*Надо ровнять блоки. Флексом делать??*/
+   display: inline-block;
+   padding: 55px;
+   background-color: white;
+}
+.ar-date {
+   width: 458px;
+   height: 38px;
+   background-color: deeppink;
+}
+#arrival-date {
+   width: 344px;
+   height: 38px;
+}
+.dep-date {
+   width: 458px;
+   height: 38px;
+   background-color: rgb(44, 188, 224);
+}
+#departure-date {
+   width: 340px;
+   height: 38px;
+}
+.adults {
+   width: 210px;
+   height: 38px;
+   background-color: lightcoral;
+}
+#adults-quantity {
+   width: 114px;
+   height: 38px;
+}
+.kids {
+   width: 180px;
+   height: 38px;
+   padding-bottom: 40px;
+   background-color: lightcoral;
+}
+#kids-quantity {
+   width: 114px;
+   height: 38px;
+} /*Почему не осталось на предыдущей строке?*/
+.search-button {
+   width: 458px;
+   height: 58px;
+   background-color: #81b3d2;
 }
 
 .site-navigation {
@@ -133,54 +419,13 @@ a :hover {
    text-transform: uppercase;
    list-style: none;
 }
-
 a {
   text-decoration: none;
 }
-
 .welcome-img {
   display: block;
   margin: 0 auto;
 }
-
-.interest-search {
-   width: auto;
-   height: 298px;
-   margin-top: 0; /*откуда сверху отступ?*/
-   background-color: antiquewhite;
-}
-
-.search {
-   display: block;
-   width: 434px;
-   height: 96px;
-   margin-top: 57px; /*почему margin-top не добавил отступ?*/
-   margin-bottom: 145px;
-   margin-left: auto;
-   margin-right: auto;
-   padding-top: 57px;
-}
-
-.s-interest {
-   font-family: "PT Sans", Arial, sans-serif;
-   font-size: 30px;
-   color: black;
-   font-style: normal;
-   font-weight: bold;
-   line-height: 36px;
-   text-align: center;
-   width: 100%;
-}
-
-.s-search {
-   font-family: "PT Sans", Arial, sans-serif;
-   font-size: 14px; /*почему не поместилось в боксе?*/
-   color: #333333;
-   line-height: 24px;
-   width: auto;
-   text-align: center;
-}
-
 .item-name {
    font-family: "PT Sans", Arial, sans-serif;
    font-weight: bold;
@@ -189,7 +434,6 @@ a {
    text-align: left;
    line-height: 26px;
 }
-
 .item-name:hover {
   color: #81b3d2;
 }
@@ -233,44 +477,33 @@ a {
    align-items: center;
    width: 100%;
    background-color: white;
-   flex: 1 0 auto; /*пыталась прижать футер*/
+   flex: 1 0 auto; /*пыталась прижать футер. почему он опять отвалился??*/
 } 
-
 .visit {
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 21px;
    color: #000000;
    font-weight: bold;
 }
-
 .footer-social {
    display: flex;
+   flex-wrap: wrap;
    flex-direction: row;
+   justify-content: space-between;
    list-style: none;
 }
-
 .social {
-   display: inline-block;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    vertical-align: bottom;
 }
-.footer-copyright {
-  display: flex; 
-  align-items: center;
-}
-.copyright {
-   padding-right: 8px;
-}
-
 .social li {
    text-align: center;
    width: 46px;
    height: 48px;
    background-color: #ffffff;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
 }
-
 .social-tw {
    background-image: url("../img/twitter-icon.svg");
 }
@@ -281,10 +514,15 @@ a {
 
 .social-yt {
    background-image: url("../img/utube-icon.svg");
-} /*что с ними не так?*/
+} /*что с ними не так, почему не отображаются?*/
 
-
-
+.footer-copyright {
+   display: flex; 
+   align-items: center;
+ }
+ .copyright {
+    padding-right: 8px;
+ }
 
 /*Styles for the inner page*/
 
