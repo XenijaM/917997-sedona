@@ -10,91 +10,97 @@
   <body class="main-body">
       <header class="main-header">
           <ul class="site-navigation">
-             <li class="site-nav"><a href="#" aria-label="ссылка ведет к блоку информация" class="li-center">Информация</a></li>
-             <li class="site-nav"><a href="#" aria-label="ссылка ведет к фото и видео" class="li-center">Фото и видео</a></li>
-             <li class="site-nav"><a href="#" class="main-header-logo"><img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona"></a></li>
-             <li class="site-nav"><a href="#" aria-label="ссылка ведет к карте штата" class="li-center">Карта штата</a></li>
-             <li class="site-nav"><a href="#" aria-label="ссылка ведет к списку гостиниц" class="li-center">Гостиницы</a></li>
+             <li>
+               <a href="#" aria-label="ссылка ведет к блоку информация" class="li-center">Информация</a>
+              </li>
+             <li>
+               <a href="#" aria-label="ссылка ведет к фото и видео" class="li-center">Фото и видео</a>
+             </li>
+             <li>
+               <a href="#" class="main-header-logo">
+                 <img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona">
+                </a>
+             </li>
+             <li>
+               <a href="#" aria-label="ссылка ведет к карте штата" class="li-center">Карта штата</a>
+             </li>
+             <li>
+               <a href="#" aria-label="ссылка ведет к списку гостиниц" class="li-center">Гостиницы</a>
+             </li>
           </ul>
+      </header>
       </header>
     <main class="container">
       <div class="section-welcome">
          <h1 class="visually-hidden">ДОБРО ПОЖАЛОВАТЬ В СЕДОНУ</h1>
          <div class="welcome-img"><img src="img/img-index/welcome.png" width="459px" height="353px" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks"></div>
       </div>
-      <div class="img-polygon">
+      <div class="img-polygon"></div>
          <img src="img/img-index/polygon.svg" class="polygon">
       </div>
       <div class="sedona-deserves">
-          <p class="s-deserves">Седона — небольшой городок в Аризоне, заслуживающий большего!</p> <!--Убрала div - лишняя обёртка.-->
+          <p class="s-deserves">Седона — небольшой городок в Аризоне, заслуживающий большего!</p> 
           <p class="s-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
-      <ul class="center-section">
-        <h2 class="visually-hidden">Преимущества Седоны.</h2>
-        <li class="true-city">
-          <h3 class="visually-hidden">Седона — это настоящий город.</h3> <!--Пробовала h3 оставить внутри p, всё пропало.-->
+
+      <section class="center-section">
+
+        <div class="true-city"> 
           <div class="inside-box">
-            <span class="box-titel">Настоящий<br> городок</span>
-            <span class="box-number">№1</span>
-            <span class="box-text">Седона - не аттракцион для туристов, там течёт своя жизнь</span>
+            <h3>Настоящий<br> городок</h3>
+            <p>№1</p>
+            <p>Седона - не аттракцион для туристов,<br> там течёт своя жизнь</p>
           </div>
-        </li>
-        <li class="img-1">
-          <p class="bkgr-img-1"></p>
-        </li>
-        <li class="icon-area">
-          <div class="icon-area-item">
-            <p class="icon-house"></p>  
-            <p class="icon-title">Жильё</p>
-            <p class="icon-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p> 
-          </div> 
-          <div class="icon-area-item second">
-            <p class="icon-food"></p>  
-            <p class="icon-title">Еда</p>
-            <p class="icon-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <div class="img-1"></div>
           </div>
-          <div class="icon-area-item">
-            <p class="icon-gift"></p>  
-            <p class="icon-title">Сувениры</p>
-            <p class="icon-description"> Не только китайского, но и местного производства!</p> 
-          </div>
-        </li>
-        <li class="img-2">
-            <p class="bkgr-img-2"></p>
-        </li>
-        <li class="devil-bridge">
-          <h3 class="visually-hidden">Там есть Мост дьявола</h3>
-          <div class="inside-box">
-            <span class="box-titel">Там есть<br> мост дьявола</span>
-            <span class="box-number">№2</span>
-            <span class="box-text">Да, по нему можно пройти! Если конечно вы осмелитесь</span>
-          </div>
-        </li>
-        <li class="advantages">
-          <h3 class="visually-hidden">Достопримечательности в Седоне находятся близко</h3>
+
+      <div class="icon-area">
+        <div class="house-item"> <!---Можно ли в CSS прописать что-то вроде div класс, класс, класс??--->
+          <div class="icon icon-house"></div>  
+          <h3>Жильё</h3>
+          <p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p> 
+        </div>
+        <div class="food-item">
+            <div class="icon icon-food"></div>  
+            <h3>Еда</h3>
+            <p>Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
+        </div>
+        <div class="gift-item">
+            <div class="icon icon-gift"></div>  
+            <h3>Сувениры</h3>
+            <p>Не только китайского, но и местного<br> производства!</p> 
+        </div>
+      </div>
+
+        <div class="devil-bridge">
+            <p class="img-2"></p>
+            <div class="inside-box">
+                <h3>Там есть Мост дьявола</h3>
+                <p>№2</p>
+                <p>Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+             </div>
+        </div>
+
+        <div class="advantages">
           <div class="square">
-              <span class="box-titel-2">Небольшая площадь</span>
-              <span class="number">№3</span>
-              <span class="box-text-2">Все достопримечательности находятся очень близко</span>
+              <h3>Небольшая площадь</h3>
+              <p>№3</p>
+              <p>Все достопримечательности находятся очень близко</p>
           </div>
-        </li>
-        <li class="advantages second-ad">
-          <h3 class="visually-hidden">Красивая дорога</h3>
           <div class="road">
-              <span class="box-titel-2">Красивая дорога</span>
-              <span class="number">№4</span>
-              <span class="box-text-2">Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
+              <h3>Красивая<br>дорога</h3>
+              <p>№4</p>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
-        </li>
-        <li class="advantages">
-          <h3 class="visually-hidden">В Седоне мало туристов</h3>
           <div class="tourist">
-              <span class="box-titel-2">Мало туристов</span>
-              <span class="number">№5</span>
-              <span class="box-text-2">Большинство едет в Гранд Каньон и толпится там</span>
+              <h3>Мало<br>туристов</h3>
+              <p>№5</p>
+              <p>Большинство едет в Гранд Каньон<br> и толпится там</p>
           </div>
-        </li>
-      </ul>
+        </div>
+      </section>
+
+
       <section>
         <div class="interest-search">
           <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
@@ -103,60 +109,70 @@
               <p class="s-search">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             </div>        
         </div>
-        <img src="img/img-index/map.jpg" height="473" alt="Карта с местоуказанием Седоны" class="img-map">
+
+        <p class="map"><img src="img/img-index/map.jpg" height="473" alt="Карта с местоуказанием Седоны" class="img-map"></p>
+
+            <button type="button" class="search-button">
+              Поиск гостиницы в Седоне
+            </button>
+
           <form class="hotel-search" action="https://sedona.com" method="post">
-             <legend class="search-titel"><p class="s-titel">Поиск гостиницы в Седоне</p></legend>
              <fieldset class="search-form">
+                  <p class="ar-date">
+                    <label for="arrival-date">
+                      <span>Дата заезда:</span>
+                      <input id="arrival-date" type="date" name="arrival" value="24 апреля 2017">
+                    </label>
+                  </p>
                 
-                  <p class="ar-date"><label for="arrival-date"><span>Дата заезда:</span>
-                  <input id="arrival-date" type="date" name="arrival" value="24 апреля 2017"> <!--Почему value не сработал?-->
-                  </label></p>
-                
-                  <p class="dep-date"><label for="departure-date"><span>Дата выезда:</span>
-                  <input id="departure-date" type="date" name="departure" >
-                  </label></p>
+                  <p class="dep-date">
+                    <label for="departure-date">
+                      <span>Дата выезда:</span>
+                      <input id="departure-date" type="date" name="departure" >
+                    </label>
+                  </p>
                
-                  <p class="adults"><label for="adults-quantity"><span>Взрослые:</span>
-                  <input id="adults-quantity" type="number" min="1" max="20" name="adults" placeholder="2"> <!--Как сделать выбор количества кнопками?-->
-                  </label></p>
+                  <p class="adults">
+                    <label for="adults-quantity">
+                      <span>Взрослые:</span>
+                      <input id="adults-quantity" type="number" min="1" max="20" name="adults" placeholder="2">
+                    </label>
+                  </p>
               
-                  <p class="kids"><label for="kids-quantity"><span>Дети:</span>
-                  <input id="kids-quantity" type="number" min="0" max="20" name="kids" placeholder="0">
-                  </label></p>
-              
-              </div>
-          <button class="search-button" type="button" name="button">Найти</button>
+                  <p class="kids">
+                    <label for="kids-quantity">
+                      <span>Дети:</span>
+                      <input id="kids-quantity" type="number" min="0" max="20" name="kids" placeholder="0">
+                    </label>
+                  </p>
+                  <button type="submit" class="search-b">Найти</button>
         </fieldset>
       </form>
 
       </section>
     </main>
   <footer class="main-footer">
-    <p
-    ><a href="#" aria-label="#" class="visit">#VISITSEDONA</a></p>
+    <p><a href="#" aria-label="#" class="visit">#VISITSEDONA</p>
     <ul class="footer-social">
       <li class="social social-tw" >
         <a href="#" aria-label="ссылка ведет к странице Седоны в твиттер">
           <span class="visually-hidden">Твиттер</span>
           <img src="img/twitter-icon.svg">
-        </a>
-      </li> <!--почему не отображаются значки?-->
-      <li class="social social-fb" >
+      </li>
+      <li class="social social-fb">
         <a href="#" aria-label="ссылка ведет к странице Седоны в фейсбук">
           <span class="visually-hidden">Фейсбук</span>
           <img src="img/fb-icon.svg">
-        </a>
-      </li>0
+      </li>
       <li class="social social-yt" >
         <a href="#" aria-label="ссылка ведет к странице Седоны на ютьюб">
           <span class="visually-hidden">Ютьюб</span>
           <img src="img/utube-icon.svg">
-        </a>
       </li>
     </ul>
     <p class="footer-copyright">
       <span class="copyright">Website by</span>
-      <a href="#" class="button"><img src="img/logo-name.png" alt="Лого HTML-Академии" width="115" height="41"></a>
+      <a href="#" class="button"><img src="img/logo-name.png" alt="Лого HTML-Академии" width="115" height="41">
   </footer>
   </body>
 </html>

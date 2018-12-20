@@ -8,24 +8,74 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
-      <ul class="site-navigation">
-         <li class="site-nav"><a href="#" aria-label="ссылка ведет к блоку информация" class="li-center">Информация</a></li>
-         <li class="site-nav"><a href="#" aria-label="ссылка ведет к фото и видео" class="li-center">Фото и видео</a></li>
-         <!--<li class="site-nav"><a href="#" class="main-header-logo"><img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona"></a></li>-->
-         <li class="site-nav"><a href="#" aria-label="ссылка ведет к карте штата" class="li-center">Карта штата</a></li>
-         <li class="site-nav"><a href="#" aria-label="ссылка ведет к списку гостиниц" class="li-center">Гостиницы</a></li>
-      </ul>
-  </header>
+      <header class="main-header">
+          <ul class="site-navigation">
+             <li>
+               <a href="#" aria-label="ссылка ведет к блоку информация" class="li-center">Информация</a>
+              </li>
+             <li>
+               <a href="#" aria-label="ссылка ведет к фото и видео" class="li-center">Фото и видео</a>
+             </li>
+             <li>
+               <a href="#" class="main-header-logo">
+                 <img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona">
+                </a>
+             </li>
+             <li>
+               <a href="#" aria-label="ссылка ведет к карте штата" class="li-center">Карта штата</a>
+             </li>
+             <li>
+               <a href="#" aria-label="ссылка ведет к списку гостиниц" class="li-center">Гостиницы</a>
+             </li>
+          </ul>
+      </header>
     <main class="container">
       <h1 class="visually-hidden">Поиск подходящего жилья</h1>
-      <!--Здесь будет часть с введением данных по поиску-->
 
+      <section class="search-filter">
+        <ul class="unfrastructure">
+          <h2>Инфраструктура</h2>
+          <li>Бассейн</li>
+          <li>Парковка</li>
+          <li>Wi-Fi</li>
+        </ul>
+        <ul class="accomodation">
+            <h2>Тип жилья</h2>
+            <li>Гостиница</li>
+            <li>Мотель</li>
+            <li>Апартаменты</li>
+        </ul>
+        <div class="filter-range">
+            <div class="filter-range-title">Стоимость в сутки (р):</div>
+            <div class="price-controls">
+              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
+            </div>
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <button class="btn-transparent" type="submit">Показать</button>
+          </div>
+      </section>
+      <div class="search-result">
+        <h2>Найдено: 3</h2>
+        <p>Сортировка:</p>
+        <p>По цене</p>
+        <p>По типу</p>
+        <p>По рейтингу</p>
+      </div>
+      <hr>
       <section class="catalog">
          <h2 class="visually-hidden">Результаты поиска подхоящего отеля</h2>
          <ul class="catalog-list">
-            <li class="catalog-item">
-               <div class="foto"><a href="#"><img src="img/img-hotels/hotel1.jpg" width="135px" height="90px" alt="фото гостиницы"></a> <!--При нажатии на фото будет показана полная версия--></div>
+            <li>
+               <div class="foto">
+                 <a href="#"><img src="img/img-hotels/hotel1.jpg" width="135px" height="90px" alt="фото гостиницы"></a>
+                </div>
                 <div class="actions">
                   <h3><a href="#" class="item-name">Amara Resort & SPA</a></h3>
                   <p class="item-type">Гостиница</p>
@@ -36,9 +86,9 @@
                <div class="rate">Рейтинг: 8,5</div>
             </li>
             <hr>
-            <li class="catalog-item">
-               <div class="foto"><a href="#"><img src="img/img-hotels/hotel2.jpg" width="135px" height="90px" alt="фото мотеля"></a></div> <!--При нажатии на фото будет показана полная версия-->
-               <div class="actions">
+            <li>
+               <div class="foto"><a href="#"><img src="img/img-hotels/hotel2.jpg" width="135px" height="90px" alt="фото мотеля"></a></div>
+               <div class="actions quail">
                   <h3><a href="#" class="item-name">Desert Quail Inn</a></h3>
                    <p class="item-type">Мотель</p>
                    <p class="item-price">от 3000р.</p>
@@ -48,9 +98,9 @@
                <div class="rate">Рейтинг: 8,9</div>
             </li>
             <hr>
-            <li class="catalog-item">
-                <div class="foto"><a href="#"><img src="img/img-hotels/hotel3.jpg"     width="135px" height="90px" alt="фото апартаментов"></a></div> <!--При нажатии на фото будет показана полная версия-->
-               <div class="actions">
+            <li>
+                <div class="foto"><a href="#"><img src="img/img-hotels/hotel3.jpg"     width="135px" height="90px" alt="фото апартаментов"></a></div>
+                <div class="actions">
                   <h3><a href="#" class="item-name">Villas at poco diablo</a></h3>
                    <p class="item-type">Апартаменты</p>
                    <p class="item-price">от 2000 р.</p>
@@ -59,20 +109,33 @@
                 </div>
                 <div class="rate">Рейтинг: 9,2</div>
             </li>
+            <hr>
          </ul>
       </section>
     </main>
+    
     <footer class="main-footer">
-      <p
-      ><a href="#" aria-label="#" class="visit">#VISITSEDONA</a></p>
-      <ul class="footer-social">
-        <li><a href="#" class="social social-tw" aria-label="ссылка ведет к странице Седоны в твиттер"><img src="img/twitter-icon.svg"></a></li> <!--почему не отображаются значки?-->
-        <li><a href="#" class="social social-fb" aria-label="ссылка ведет к странице Седоны в фейсбук"><img src="img/fb-icon.svg"></a></li>
-        <li><a href="#" class="social social-yt" aria-label="ссылка ведет к странице Седоны на ютьюб"><img src="img/utube-icon.svg"></a></li>
-      </ul>
-      <p class="footer-copyright">
-        <span class="copyright">Website by</span>
-        <a href="#" class="button"><img src="img/logo-name.png" alt="Лого HTML-Академии" width="115" height="41"></a>
-    </footer>
+        <p><a href="#" aria-label="#" class="visit">#VISITSEDONA</p>
+        <ul class="footer-social">
+          <li class="social social-tw" >
+            <a href="#" aria-label="ссылка ведет к странице Седоны в твиттер">
+              <span class="visually-hidden">Твиттер</span>
+              <img src="img/twitter-icon.svg">
+          </li>
+          <li class="social social-fb">
+            <a href="#" aria-label="ссылка ведет к странице Седоны в фейсбук">
+              <span class="visually-hidden">Фейсбук</span>
+              <img src="img/fb-icon.svg">
+          </li>
+          <li class="social social-yt" >
+            <a href="#" aria-label="ссылка ведет к странице Седоны на ютьюб">
+              <span class="visually-hidden">Ютьюб</span>
+              <img src="img/utube-icon.svg">
+          </li>
+        </ul>
+        <p class="footer-copyright">
+          <span class="copyright">Website by</span>
+          <a href="#" class="button"><img src="img/logo-name.png" alt="Лого HTML-Академии" width="115" height="41">
+      </footer>
   </body>
 </html>
