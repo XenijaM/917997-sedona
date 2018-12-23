@@ -2,15 +2,17 @@
 body {
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 16px;
-   text-transform: uppercase;
-   margin: 0;
+   text-transform: uppercase; 
+   width: 1200px;
    height: 100%;
-   width: 1200px;
-   background-color: white; /*для наглядности*/
-   /*Откуда во всём боди, кроме хэдера, появился отсуп справа?*/
+   margin: 0 auto;
 }
-.main-body header { /*Как хэдеру задать ширину?*/
+.main-body header { 
    width: 1200px;
+   margin: 0; /*Что это за отступ слева? Уже везде 0 маргины.*/
+}
+.site-navigation img:hover {
+   box-shadow: none;
 }
 .section-welcome {
    background-image: url("../img/img-index/background-main.jpg");
@@ -23,18 +25,29 @@ body {
    flex-direction: row;
    justify-content: space-around; 
    background-color: white;
-   margin: 0px;
+   margin: 0px; /*Что это за отступ слева? Уже везде 0 маргины.*/
    height: 56px;
-   width: 1200px; /*почему кусок справа торчит?*/
+   width: 1200px;
 }
 .site-navigation li {
    display: flex;
    width: 239px;
    margin: auto;
+}
+.site-navigation a {
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 14px;
-   color: #000000; /*Почему цвет остался синим?*/
+   color: #000000;
    font-weight: bold;
+}
+.site-navigation a:visited {
+   color:rgba(0, 0, 0, 0.3);
+}
+.site-navigation a:hover {
+   color: #81b3d2;
+}
+.site-navigation a:activ, .site-navigation a:focus {
+   color: #766357; 
 }
 li:nth-child(3) {
    width: 244px;
@@ -240,7 +253,18 @@ li:nth-child(3) {
    align-items: center;
    background-color: #eeeeee;
 }
-
+.number {
+   position: relative;
+}
+.number::before { /*Почему не сработало?*/
+   content: " "
+   position: absolute;
+   left: 35px;
+   top: 5px;
+   width: 5px;
+   height: 1px;
+   background-color: #333333;
+}
 .square {
    width: 218px; /*Пришлось изменить ширину с 208, уменьшить отступ слева на 10, т.к. не вмещался текст. Почему?*/
    height: 134px;
@@ -314,20 +338,20 @@ li:nth-child(3) {
 }
 a :hover {
    outline: 0;
-   box-shadow: 0 0 0 3px red;
+   /*box-shadow: 0 0 0 3px red;*/
 }
 .img-map {
    width: 100%;
    height: 593px;
 }
-
 .search-button {
    position: absolute;
-   left: 316px;
+   left: calc(50% - 568px / 2);
    bottom: 612px;
+   box-sizing: border-box;
    width: 568px;
    height: 86px;
-   background: #766357;
+   background-color: #766357;
    border: none;
    color: white;
    text-align: center;
@@ -335,64 +359,77 @@ a :hover {
    font-weight: bold;
    text-transform: uppercase;
 }
-
-/*вёрстка формы поиска гостиницы*/
+.search-button:hover {
+   background-color: #604e43;
+}
+.search-button:active,
+.search-button:focus {
+   background-color: #503e33;
+   color: rgba(255, 255, 255, 0.3)
+}
+/*ФОРМА ПОИСКА*/
 
 .hotel-search {
-   position: absolute; /*скорректировать координаты*/
+   position: absolute;
    bottom: 140px;
-   left: 315px; /*Как можно задать точку объекта для сдвига?*/
+   left: calc(50% - 568px / 2);
    width: 568px;
    min-height: 481px;
 }
-
-.search-form{ /*Надо ровнять блоки. Флексом делать??*/
+.search-form { 
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   padding: 55px;
+   box-sizing: border-box; /*Почему ширина бокса не скорректировалась?*/
+   margin: 0;
+   border: none;
+   width: 568px;
+   padding: 53px;
    background-color: white;
 }
-.search-form p {
-
-}
-.ar-date {
-   width: 458px;
+.search-form div {
+   width: 462px;
    height: 38px;
-   background-color: deeppink;
+   margin-bottom: 29px;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: center;
 }
-#arrival-date {
-   width: 344px;
+.ar-date input {
+   box-sizing: border-box;
+   width: 346px;
    height: 38px;
+   margin-left: 11px;
 }
-.dep-date {
-   width: 458px;
-   height: 38px;
-   background-color: rgb(44, 188, 224);
+.search-form input {
+   background-color: #f2f2f2;
 }
-#departure-date {
-   width: 340px;
-   height: 38px;
+.search-form input:hover {
+   background-color: #ebebeb;
 }
-.adults {
-   width: 210px;
+.search-form input:active,
+.search-form input:focus {
+   background-color:#ffffff;
+}
+.dep-date input {
+   box-sizing: border-box;
+   width: 346px;
    height: 38px;
-   background-color: lightcoral;
+   margin-left: 8px;
+}
+.quantity input {
+   width: 114px;
+   height: 38px;
+   margin: 0;
 }
 #adults-quantity {
-   width: 114px;
-   height: 38px;
-}
-.kids {
-   width: 180px;
-   height: 38px;
-   background-color: lightcoral;
+   margin-left: 22px;
 }
 #kids-quantity {
-   width: 114px;
-   height: 38px;
-} /*Почему не осталось на предыдущей строке?*/
+   margin-left: 15px;
+}
 .search-b {
    width: 458px;
    height: 58px;
@@ -402,8 +439,17 @@ a :hover {
    text-align: center;
    font-weight: bold;
    text-transform: uppercase;
+   border: none;
+   margin-top: 26px;
 }
-
+.search-b:hover {
+   background-color:#669ec0;
+}
+.search-b:active,
+.search-b:focus {
+   background-color: #5496bd;
+   color: rgba(255, 255, 255, 0.3);
+}
 .site-navigation {
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 14px;
@@ -439,32 +485,8 @@ a {
    color: rgba(0, 0, 0, 0.3);
 } /*почему не сработало?*/
 
-.item-type
-.item-price {
-   font-family: "PT Sans", Arial, sans-serif;
-   font-size: 14px;
-   color: black;
-   font-weight: normal;
-   font-style: normal;
-   text-align: left;
-   line-height: 21px;
-}
-
-.button-detailed
-.reservation-button {
-   font-family: "PT Sans", Arial, sans-serif;
-   font-weight: bold;
-   font-style: normal;
-   font-size: 14px;
-   text-align: left;
-   line-height: 21px;
-   color: #ffffff;
-   background-color:
-}
-
-/* footer style */
-
-.main-footer { /*почему футер залез на карту??*/
+/*FOOTER*/
+.main-footer { 
    display: flex;
    flex-direction: row;
    justify-content: space-around;
@@ -474,8 +496,11 @@ a {
    opacity: 0.9;
    margin: 0;
    flex: 1 0 auto;
-
 } 
+.site-navigation {
+   margin-left: 0;
+}
+.site-navigation li:first-child {margin-left: 35px;}
 .visit {
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 21px;
@@ -503,22 +528,46 @@ a {
    height: 48px;
    background-color: #81b3d2;
 }
-
-.social-tw {
-   background-color: #81b3d2;
+.social:hover {
+   background-color: #669ec0;
 }
-
+.social:active,
+.social:focus {
+   background-color:#5496bd;
+}
+/*.social-tw {
+   background-image: url("img/twitter-icon.svg");
+}
 .social-fb {
-   background-color: #81b3d2;
+   background-image: url("img/fb-icon.svg");
 }
-
 .social-yt {
-   background-color: #81b3d2;
-}
+   background-image: url("img/utube-icon.svg");
+}Хотела img перенести из html как фоновую картинку*/
 
 .footer-copyright {
    display: flex; 
    align-items: center;
+ }
+ .footer-copyright span {
+    color: black;
+ }
+ .footer-copyright p {
+    width: 115px;
+    height: 41px;
+    margin-left: 6px;
+    background-image: url("../img/logo-name.png");
+ }
+ .footer-copyright p:hover {
+   background-image: url("../img/logo-name-2.png")
+}
+.footer-copyright p:active,
+.footer-copyright p:focus {
+   background-image: url("../img/logo-name-3.png")
+}
+ .footer-copyright a {
+    color: black;
+    font-size: 14px;
  }
  .copyright {
     padding-right: 8px;
@@ -538,51 +587,9 @@ footer {
    width: 100%;
   }
 
-/*Styles for the inner page*/
+/*INNER PAGE. Блок фильтра поиска*/
 
-.catalog-list {
-   list-style: none;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   margin: 0;
-   margin-bottom: 120px;
-}
-.catalog-list li {
-   display: flex;
-   style: none;
-   text-decoration: none;
-   align-content: space-between;
-   justify-content: space-between;
-   min-height: 151px;
-}
-.actions {
-   display: flex;
-   justify-content: space-between;
-   flex-wrap: wrap;
-   width: 275px;
-   margin-right: auto; /*как это сделать без указания px?ведь всё поедет*/
-   margin-bottom: auto;
-   padding: auto;
-}
-.quail {
-   margin-right: 600px;
-}
-.button-detailed {
-   width: 110px;
-   height: 27px;
-   backgorund-color: 
-}
-.reservation-button {
-   color: white;
-   width: 142px;
-   height: 27px;
-}
-.rate {
-   margin-right: 73px;
-}
-/*INNER. СЕКЦИЯ ФИЛЬТРА ПОИСКА*/
-.search-filter { /*Как корректно отобразить изображение? И откуда сверху маргин? У секшн и хэдер маргины 0*/
+.search-filter { 
    display: flex;
    justify-content: space-between;
    align-items: top;
@@ -592,11 +599,6 @@ footer {
    background-repeat: no-repeat;
    background-size: 100%;
    margin: 0;
-}
-.foto { /*Откуда слева отступ? Вроде везде маргины по 0*/
-   width: 135px;
-   height: 90px;
-   padding: 30px 72px;
 }
 .search-filter ul {
    list-style: none;
@@ -609,8 +611,13 @@ footer {
 }
 .search-filter li {
    font-size: 14px;
+   color: #ffffff;
    margin-top: 36px;
    margin-bottom: 36px;
+}
+.search-filter h2 {
+   font-size: 16px;
+   color: #ffffff;
 }
 .filter-range {
    width: 330px;
@@ -714,8 +721,7 @@ footer {
  }
 .search-result p {
    display: inline-block;
-   padding-right: 20px;
-
+   margin-right: 20px;
 }
 .search-result h2 {
    display: inline-block;
@@ -724,10 +730,179 @@ footer {
    color: #000000;
    padding: 31px 72px;
    margin: 0;
-
+   padding-right: 46px;
+}
+.sorted {
+   font-size: 12px;
+   color: #000000;
+}
+.price {
+   font-size: 12px;
+   color: #81b3d2;
+}
+.type {
+   font-size: 12px;
+   border-bottom: 1px dotted #81b3d2;
+   color: rgba(0, 0, 0, 0.3);
+}
+.type:hover {
+   color: #81b3d2;
+}
+.type:focus, .type:active {
+   color: #000000;
+}
+.rating {
+   font-size: 12px;
+   border-bottom: 1px dotted #81b3d2;
+   color: rgba(0, 0, 0, 0.3);
+}
+.rating:hover, .rating:active {
+   color: #81b3d2;
+}
+.rating:focus {
+   color: #000000;
 }
 hr {
   color: #f2f2f2;
   width: 1200px;
   height: 1px;
 }
+/*INNER. Секция с результатами*/
+
+.catalog {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-content: flex-start;
+   flex-wrap: nowrap;
+   width: 100%;
+   min-height: 453px;
+   margin: 0;
+   margin-bottom: 120px;
+   padding: 0;
+   margin-top: -10px;
+}
+.catalog-line {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   padding: 31px 73px;
+   height: 100px;
+   width: auto;
+}
+.central-block {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   box-sizing: bo
+   width: 300px;
+   height: 90px;
+   margin-left: 30px;
+}
+.catalog h3 {
+   margin: 0;
+   padding: 0;
+   height: 26px;
+   width: 100%;
+   font-size: 21px;
+   text-align: left;
+   text-weight: bold;
+   color: #000000;
+}
+.catalog span {
+   display: block;
+   width: 110px;
+   height: 21px;
+   margin-right: 5px;
+   margin-top: 8px;
+   font-size: 14px;
+   color: #333333;
+}
+.detailed {
+   width: 110px;
+   height: 23px;
+   background-color:#81b3d2;
+   margin-right: 5px;
+   margin-top: 8px;
+   padding-top: 4px;
+   text-align: center;
+}
+.detailed:hover {
+   background-color: #669ec0;
+}
+.detailed:active, 
+.detailed:focus {
+   background-color: #5496bd;
+   color: rgba(255, 255, 255, 0.3);
+}
+.reservation-button {
+   width: 142px;
+   height: 27px;
+   background-color: #766357;
+   margin-top: 8px;
+   font-size: 14px;
+   color: white;
+   font-weight: bold;
+   text-transform: uppercase;
+   border: none;
+}
+.reservation-button:hover {
+   background-color: #604e43;
+}
+.reservation-button:active, .reservation-button:focus {
+   background-color: #503e33;
+   color: rgba(255, 255, 255, 0.3);
+}
+.central-block a {
+   font-size: 14px;
+   color: white;
+   font-weight: bold;
+   text-transform: uppercase;
+   text-align: center;
+   padding: 7px 17px; /*Почему отступы неравноменрные??*/
+}
+.central-block h3 {
+   font-size: 21px;
+   font-weight: bold;
+   color: #000000;
+}
+.central-block h3:hover {
+   color: #81b3d2;
+}
+.central-block h3:active,
+.central-block h3:focus {
+   color: rgba(0, 0, 0, 0.3);
+}
+.block-rate {
+   position: relative;
+   margin-left: 510px;
+   width: 110px;
+   height: 90px;
+}
+.block-rate p {
+   box-sizing: border-box;
+   width: 110px;
+   height: 27px;
+   margin-top: 66px;
+   background-color:#f2f2f2;
+   font-size: 14px;
+   color: #666666;
+   text-align: center;
+   padding-top: 5px;
+}
+.block-rate p::before {
+   content: ""
+   position: absolute;
+   width: 18px;
+   height: 17px;
+   background-image: url("../img/img-hotels/icon.star.svg");
+   background-repeat: repeat;
+
+}
+.catalog-line div {
+   height: 90px;
+}
+ hr {
+    margin: 0;
+ }
