@@ -623,7 +623,7 @@ footer {
    display: flex;
    align-items: center;
 }
-.search-filter h2 {
+.search-titel {
    font-size: 16px;
    color: #ffffff;
 }
