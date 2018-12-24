@@ -624,6 +624,7 @@ footer {
    align-items: center;
 }
 .search-titel {
+   display: block;
    font-size: 16px;
    color: #ffffff;
 }
