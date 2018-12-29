@@ -9,7 +9,7 @@ body {
 }
 .main-body header { 
    width: 1200px;
-   margin: 0; /*Что это за отступ слева? Уже везде 0 маргины.*/
+   margin: 0; 
 }
 .site-navigation img:hover {
    box-shadow: none;
@@ -25,7 +25,7 @@ body {
    flex-direction: row;
    justify-content: space-around; 
    background-color: white;
-   margin: 0px; /*Что это за отступ слева? Уже везде 0 маргины.*/
+   margin: 0px;
    height: 56px;
    width: 1200px;
 }
@@ -49,11 +49,8 @@ body {
 .site-navigation a:activ, .site-navigation a:focus {
    color: #766357; 
 }
-li:nth-child(3) {
-   width: 244px;
-   padding-top: 0;
-}
-.img-polygon { /*Также можно добавив как фоновое изображение с наложением, background-position, z-index*/
+
+.img-polygon { 
    width: auto;
    background-color: transparent;
    margin-top: -57px;
@@ -62,7 +59,7 @@ li:nth-child(3) {
    height: 216px;
    width: 100%;
    margin: 0;
-   margin-top: -25px; /*Пока так. После абсолют.поз. img-polygon поправить.*/
+   margin-top: -25px; 
    background-color: white;
 }
 .s-deserves {
@@ -121,8 +118,6 @@ li:nth-child(3) {
    background-position: 506px 0;
    z-index: 1;
 }
-
-/*БЛОК В СЕРЕДИНЕ*/
 .center-section {
    display: flex;
    flex-flow: row wrap;
@@ -130,7 +125,7 @@ li:nth-child(3) {
    align-items: stretch;
    align-content: stretch;
    width: 100%;
-   margin: 0; /*Откуда отсутп слева?*/
+   margin: 0; 
    list-style: none;
 }
 .true-city {
@@ -142,7 +137,7 @@ li:nth-child(3) {
 .inside-box {
    margin: 0;
    background-color: #bfdbec;
-   width: 400px; /*Значение auto не сработало.*/
+   width: 400px; 
    min-height: 256px;
    padding: 0;
 }
@@ -152,7 +147,7 @@ li:nth-child(3) {
    font-size: 21px;
    font-weight: bold;
    color: white;
-   padding-top: 46px; /*Есть ли другой способ отцентровать блок?*/
+   padding-top: 46px; 
 }
 .inside-box p {
    line-height: 21px;
@@ -161,13 +156,12 @@ li:nth-child(3) {
    color: white;
 }
 .img-1 {
-   width: 800px; /*Почему здесь не сработало значение авто?*/
+   width: 800px; 
    height: 256px;
    margin: 0;
    background-image: url("../img/img-index/background-city.jpg");
    background-repeat: no-repeat;
 }
-
 .icon-area {
    display: flex;
    flex-flow: row nowrap;
@@ -176,7 +170,7 @@ li:nth-child(3) {
    width: 100%;
    background-color: white;
 }
-.house-item { /*КАК ЭТИ КЛАССЫ ВМЕСТЕ ПРОПИСАТЬ??*/
+.house-item { 
    min-width: 284px;
    min-height: 320px;
    margin: auto;
@@ -192,9 +186,8 @@ li:nth-child(3) {
    min-width: 284px;
    min-height: 320px;
    margin: auto;
-   padding: auto; /*ОТКУДА ПРАВЫЙ МАРГИН??*/
+   padding: auto; 
 }
-
 .icon-area h3 {
    font-size: 21px;
    line-height: 21px;
@@ -219,7 +212,6 @@ li:nth-child(3) {
    margin-top: 50px; 
    background-repeat: no-repeat;
 }
-
 .icon-food {
    background-image: url(../img/img-index/icon-3.food.svg); 
 }
@@ -230,7 +222,6 @@ li:nth-child(3) {
 .icon-house {
    background-image: url(../img/img-index/icon-1.house.svg);  
 }
-
 .devil-bridge {
    display: flex;
    flex-flow: row nowrap;
@@ -245,7 +236,6 @@ li:nth-child(3) {
    background-image: url(../img/img-index/canyon.jpg);
    background-repeat: no-repeat;
 }
-
 .advantages {
    display: flex;
    flex-flow: row nowrap;
@@ -253,37 +243,20 @@ li:nth-child(3) {
    align-items: center;
    background-color: #eeeeee;
 }
-/*.number:before,
-.number:after {
-   content: "—"
-   display: block;
-   width: 4px;
-   height: 1px;
-   padding-left: 5px;
-}
-/*.number::before { Почему не сработало?
-   content: " "
-   position: absolute;
-   left: 35px;
-   top: 5px;
-   width: 5px;
-   height: 1px;
-   background-color: #333333;
-}*/
 .square {
-   width: 218px; /*Пришлось изменить ширину с 208, уменьшить отступ слева на 10, т.к. не вмещался текст. Почему?*/
+   width: 218px;
    height: 134px;
    margin: 30px 97px 73px 85px;
    background-color:#eeeeee;
 }
 .road {
-   width: 272px; /*Также пришлось увеличить ширину на 10px, уменьшить отступы по бокам.*/
+   width: 272px;
    height: 142px;
    margin: 30px 64px 73px 64px;
    background-color:#eeeeee;
 }
 .tourist {
-   width: 260px; /*Также пришлось увеличить ширину на 14px, уменьшить отступы по бокам.*/
+   width: 260px;
    height: 142px;
    margin: 30px 70px 73px 70px;
    background-color:#eeeeee;
@@ -303,8 +276,6 @@ li:nth-child(3) {
    font-size: 14px;
    color: #333333;
 }
-/*КОНЕЦ БЛОКА*/
-
 .interest-search {
    width: auto;
    height: 298px;
@@ -335,7 +306,7 @@ li:nth-child(3) {
    width: auto;
    margin-left: auto;
    margin-right: auto;
-   font-size: 13px; /*почему не поместилось в боксе?*/
+   font-size: 13px;
    color: #333333;
    line-height: 24px;
    text-align: center;
@@ -343,7 +314,6 @@ li:nth-child(3) {
 }
 a :hover {
    outline: 0;
-   /*box-shadow: 0 0 0 3px red;*/
 }
 .img-map {
    width: 100%;
@@ -363,6 +333,7 @@ a :hover {
    font-size:21px;
    font-weight: bold;
    text-transform: uppercase;
+   z-index: 1;
 }
 .search-button:hover {
    background-color: #604e43;
@@ -372,21 +343,29 @@ a :hover {
    background-color: #503e33;
    color: rgba(255, 255, 255, 0.3)
 }
-/*ФОРМА ПОИСКА*/
-
 .hotel-search {
    position: absolute;
-   bottom: 140px;
+   display: none;
+   bottom: 130px;
    left: calc(50% - 568px / 2);
    width: 568px;
    min-height: 481px;
+}
+@keyframes bounce {
+   0%  { transform: translateY(-140px); }
+   100% { transform: translateY(0); }
+ }
+.hotel-search-show {
+   display: block;
+   animation-name: bounce;
+   animation-duration: 0.1s;
 }
 .search-form { 
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
-   box-sizing: border-box; /*Почему ширина бокса не скорректировалась?*/
+   box-sizing: border-box; 
    margin: 0;
    border: none;
    width: 568px;
@@ -402,11 +381,68 @@ a :hover {
    justify-content: space-between;
    align-items: center;
 }
-.ar-date input {
+.search-form span {
+   font-size: 14px;
+   color: #000000;
+   font-weight: bold;
+}
+.margin {
+   margin-right: 3px;
+}
+.search-form input[type="text"] {
    box-sizing: border-box;
    width: 346px;
    height: 38px;
    margin-left: 11px;
+   padding-left: 13px;
+   font-weight: bold;
+   border: none;
+}
+.departure-date {
+   padding: 0;
+   
+}
+.adults {
+   box-sizing: border-box;
+   width: 220px;
+}
+.kids {
+   margin-right: 8px;
+   box-sizing: border-box;
+   width: 180px;
+}
+.margin-two {
+   margin-right: 31px;
+   width: 75px;
+}
+.margin-three {
+   margin-left: 48px;
+   margin-right: 20px;
+   width: 40px;
+}
+input[type="text"]{
+   background: url(../img/img-index/calendar.png) 316px 8px no-repeat;
+   width: 21px;
+   height: 22px;
+}
+input[type="text"]:hover {
+   background: url(../img/img-index/calendar_hover.png) 316px 8px no-repeat;
+}
+input[type="text"]:active,
+input[type="text"]:focus {
+   background: url(../img/img-index/calendar_press.png) 316px 8px no-repeat;
+}
+#ad-quantity,
+#kids-quantity {
+   box-sizing: border-box;
+   margin: 0;
+   width: 114px;
+   height: 38px;
+   border: none;   
+   padding-left: 52px;
+   font-size: 14px;
+   font-weight: bold;
+   border: 1px solid #f2f2f2;
 }
 .search-form input {
    background-color: #f2f2f2;
@@ -417,23 +453,26 @@ a :hover {
 .search-form input:active,
 .search-form input:focus {
    background-color:#ffffff;
+   border: 2px solid #e5e5e5;
 }
 .dep-date input {
    box-sizing: border-box;
    width: 346px;
    height: 38px;
-   margin-left: 8px;
 }
-.quantity input {
-   width: 114px;
-   height: 38px;
-   margin: 0;
+.quantity {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 40px;
 }
-#adults-quantity {
-   margin-left: 22px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
-#kids-quantity {
-   margin-left: 15px;
+input[type='number'] {
+    -moz-appearance: textfield;
 }
 .search-b {
    width: 458px;
@@ -464,6 +503,9 @@ a :hover {
    text-transform: uppercase;
    list-style: none;
 }
+.li-center {
+   padding-left: 0;
+}
 a {
   text-decoration: none;
 }
@@ -488,9 +530,8 @@ a {
 }
 .item-name:active {
    color: rgba(0, 0, 0, 0.3);
-} /*почему не сработало?*/
+}
 
-/*FOOTER*/
 .main-footer { 
    display: flex;
    flex-direction: row;
@@ -514,11 +555,14 @@ a {
 }
 .footer-social {
    display: flex;
+   box-sizing: border-box;
    flex-wrap: nowrap;
    flex-direction: row;
-   justify-content: center;
-   width: 144px;
+   justify-content: space-between;
+   width: 150px;
    height: 48px;
+   margin: 0;
+   padding: 0;
 }
 .footer-social li {
    margin-right: 5px;
@@ -540,16 +584,6 @@ a {
 .social:focus {
    background-color:#5496bd;
 }
-/*.social-tw {
-   background-image: url("img/twitter-icon.svg");
-}
-.social-fb {
-   background-image: url("img/fb-icon.svg");
-}
-.social-yt {
-   background-image: url("img/utube-icon.svg");
-}Хотела img перенести из html как фоновую картинку*/
-
 .footer-copyright {
    display: flex; 
    align-items: center;
@@ -592,14 +626,12 @@ footer {
    width: 100%;
   }
 
-/*INNER PAGE. Блок фильтра поиска*/
-
 .search-filter { 
    display: flex;
    justify-content: space-between;
    align-items: top;
    width: 100%;
-   min-height: 217px;
+   height: 217px;
    background-image: url("../img/img-hotels/filter-background.jpg");
    background-repeat: no-repeat;
    background-size: 100%;
@@ -612,21 +644,24 @@ footer {
    text-align: left;
    text-transform: uppercase;
    color: white;
-   margin-top: 30px;
 }
 .search-filter li {
    font-size: 14px;
    color: #ffffff;
-   margin-top: 36px;
-   margin-bottom: 36px;
-   line-height:14px;
+   margin-bottom: 23px;
+   line-height: 14px;
    display: flex;
    align-items: center;
 }
 .search-titel {
-   display: block;
    font-size: 16px;
+   font-weight: bold;
+   height: 21px;
+   margin-top: 14px;
    color: #ffffff;
+}
+.unfrastructure {
+   margin-left: 32px;
 }
 .checkbox-on:before {
    content: url(../img/img-hotels/checkbox-on.png);
@@ -641,7 +676,9 @@ footer {
 }
 .filter-range {
    width: 330px;
-   margin: 50px auto; /* для демо */
+   margin-top: 31px;
+   margin-left: 270px;
+   margin-right: 74px;
    color: #ffffff;
    text-transform: uppercase;
  }
@@ -739,6 +776,9 @@ footer {
    color: #000000;
    background: #ffffff;
  }
+ .search-result {
+    height: 83px;
+ }
 .search-result p {
    display: inline-block;
    margin-right: 20px;
@@ -765,6 +805,35 @@ footer {
    border-bottom: 1px dotted #81b3d2;
    color: rgba(0, 0, 0, 0.3);
 }
+.up {
+   display: inline-block;
+   width: 20px;
+   height: 15px;
+   margin: 0;
+   margin-left: 500px;
+   background: url(../img/img-hotels/icon-up.png)  no-repeat;
+}
+.up:hover{
+   background: url(../img/img-hotels/icon-up-hover.png)  no-repeat;
+}
+.up:active,
+.up:focus {
+   background: url(../img/img-hotels/icon-up-press.png)  no-repeat;
+}
+.down {
+   display: inline-block;
+   width: 20px;
+   height: 15px;
+   margin: 0;
+   background: url(../img/img-hotels/icon-down.png) no-repeat;
+}
+.down:hover{
+   background: url(../img/img-hotels/icon-down-hover.png)  no-repeat;
+}
+.down:active,
+.down:focus {
+   background: url(../img/img-hotels/icon-down-press.png)  no-repeat;
+}
 .type:hover {
    color: #81b3d2;
 }
@@ -787,7 +856,6 @@ hr {
   width: 1200px;
   height: 1px;
 }
-/*INNER. Секция с результатами*/
 
 .catalog {
    display: flex;
@@ -815,8 +883,8 @@ hr {
    flex-direction: row;
    justify-content: flex-start;
    flex-wrap: wrap;
-   box-sizing: bo
-   width: 300px;
+   box-sizing: border-box;
+   width: 305px;
    height: 90px;
    margin-left: 30px;
 }
@@ -866,7 +934,7 @@ hr {
    font-weight: bold;
    text-transform: uppercase;
    border: none;
-}px;
+}
 .reservation-button:hover {
    background-color: #604e43;
 }
@@ -880,7 +948,7 @@ hr {
    font-weight: bold;
    text-transform: uppercase;
    text-align: center;
-   padding: 7px 17px; /*Почему отступы неравноменрные??*/
+   padding: 7px 17px; 
 }
 .central-block h3 {
    font-size: 21px;
@@ -899,29 +967,29 @@ hr {
    flex-direction: row;
    flex-wrap: wrap;
    margin-left: 510px;
-   width: 110px;
+   width: 115px;
    height: 90px;
 }
 .icon-star-4 {
    display: flex;
-   margin-left: 10px;
-   width: 100px;
+   margin-left: -2;
+   width: 110px;
    height: 18px;
 }
 .icon-star-3 {
    display: flex;
-   margin-left: 35px;
-   width: 85px;
+   margin-left: 22px;
+   width: 95px;
    height: 18px;
 }
 .icon-star-2 {
    display: flex;
-   margin-left: 58px;
-   width: 52px;
+   margin-left: 45px;
+   width: 62px;
    height: 18px;
 }
 .star {
-   width: 18px;
+   width: 20px;
    margin-right: 0;
    margin-left: 6px;
    margin-top: 3px;
