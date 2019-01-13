@@ -11,7 +11,7 @@
       }
       BODY {
     opacity: .4;
-  }
+      }
     </style>
   </head>
 
@@ -34,7 +34,7 @@
                <a href="#" aria-label="ссылка ведет к карте штата" class="li-center">Карта штата</a>
              </li>
              <li>
-               <a href="inner.html" aria-label="ссылка ведет к списку гостиниц" class="li-center">Гостиницы</a>
+               <a href="inner.html" aria-label="ссылка ведет к списку гостиниц" class="li-center li-center-hotel">Гостиницы</a>
              </li>
           </ul>
       </header>
@@ -85,17 +85,17 @@
         </div>
         <div class="advantages">
           <div class="square">
-              <h3 class="advantages-title">Небольшая площадь</h3>
+              <h3 class="advantages-title square-title">Небольшая площадь</h3>
               <p class="advantages-number"> — №3 — </p>
-              <p class="advantages-text">Все достопримечательности находятся очень близко</p>
+              <p class="advantages-text square-text">Все достопримечательности находятся очень близко</p>
           </div>
           <div class="road">
-              <h3 class="advantages-title">Красивая<br>дорога</h3>
+              <h3 class="advantages-title road-title">Красивая<br>дорога</h3>
               <p class="advantages-number"> — №4 — </p>
               <p class="advantages-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="tourist">
-              <h3 class="advantages-title">Мало<br>туристов</h3>
+              <h3 class="advantages-title tourist-title">Мало<br>туристов</h3>
               <p class="advantages-number"> — №5 — </p>
               <p class="advantages-text">Большинство едет в Гранд Каньон<br> и толпится там</p>
           </div>
@@ -116,19 +116,19 @@
             </button>
           <form class="hotel-search hotel-search-show" action="https://sedona.com" method="post">
              <fieldset class="search-form">
-                  <div class="ar-date">
+                  <div class="search-block ar-date">
                     <label for="arrival-date">
                     <span class="margin">Дата заезда:</span>
                     </label>
                     <input id="arrival-date" type="text" value="24 апреля 2017" name="arrival" required>
                   </div>
-                  <div class="dep-date">
+                  <div class="search-block dep-date">
                     <label for="departure-date">
                     <span>Дата выезда:</span>
                     </label>
                     <input id="departure-date" type="text" value="4 июля 2017" name="departure" required>
                   </div>
-                  <div class="quantity">
+                  <div class="search-block quantity">
                     <div class="adults">
                       <label for="ad-quantity">
                       <span class="margin-two">Взрослые:</span>
