@@ -5,14 +5,14 @@
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <style>
+    <!---<style>
       HTML {
         background: url( 'sedona-index.jpg' ) 50% 0 no-repeat;
       }
       BODY {
     opacity: .4;
       }
-    </style>
+    </style>-->
   </head>
 
   <body class="main-body">
@@ -109,8 +109,9 @@
               <p class="s-search">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             </div>        
         </div>
-        <!--<p class="map"><img src="img/img-index/map.jpg" height="593" width="1200" alt="Карта с местоуказанием Седоны" class="img-map"></p> Ниже интерактивная карта.-->
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;width=1200&amp;height=593&amp;lang=ru_RU&amp;scroll=true"></script>
+        <!--<p class="map">< alt="Карта с местоуказанием Седоны" class="img-map"></p> Ниже интерактивная карта.-->
+        <div id="map"></div>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;width=1200&amp;height=593&amp;lang=ru_RU&amp;scroll=true" id="map"></script>
             <button type="button" class="search-button">
               Поиск гостиницы в Седоне
             </button>
@@ -133,13 +134,21 @@
                       <label for="ad-quantity">
                       <span class="margin-two">Взрослые:</span>
                       </label>
-                      <input id="ad-quantity" class="adults-quantity" type="number" value="2" required>
+                      <div class="sign-block">
+                        <button type="submit" class="minus-plus">–</button>
+                        <input id="ad-quantity" class="adults-quantity" type="number" value="2" required>
+                        <button type="submit" class="minus-plus">+</button>
+                      </div>
                     </div>
                     <div class="kids">
                       <label for="kids-quantity">
                       <span class="margin-three">Дети:</span>
                       </label>
-                      <input id="kids-quantity" class="kids-quantity" type="number" value="0" required>
+                      <div class="sign-block">
+                        <button type="submit" class="minus-plus">–</button>
+                        <input id="kids-quantity" class="kids-quantity" type="number" value="0" required>
+                        <button type="submit" class="minus-plus">+</button>
+                      </div>
                     </div>
                  </div>
                   <button type="submit" class="search-b">Найти</button>
