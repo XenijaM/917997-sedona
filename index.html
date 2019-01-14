@@ -38,6 +38,7 @@
              </li>
           </ul>
       </header>
+      
       <div class="section-welcome">
          <h1 class="visually-hidden">ДОБРО ПОЖАЛОВАТЬ В СЕДОНУ</h1>
          <div class="welcome-img"><img src="img/img-index/welcome.png" width="459" height="353" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks"></div>
@@ -109,9 +110,11 @@
               <p class="s-search">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             </div>        
         </div>
-        <!--<p class="map">< alt="Карта с местоуказанием Седоны" class="img-map"></p> Ниже интерактивная карта.-->
-        <div id="map"></div>
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;width=1200&amp;height=593&amp;lang=ru_RU&amp;scroll=true" id="map"></script>
+
+        <div id="map" class="map"></div>
+
+        <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;width=1200&amp;height=593&amp;lang=ru_RU&amp;scroll=true" for="map"></script>
+        
             <button type="button" class="search-button">
               Поиск гостиницы в Седоне
             </button>
@@ -155,7 +158,7 @@
         </fieldset>
       </form>
       </section>
-
+      
   <footer class="main-footer">
     <p><a href="#" aria-label="#" class="visit">#VISITSEDONA</a></p>
     <ul class="footer-social">
