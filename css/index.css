@@ -917,9 +917,9 @@ footer {
 .map {
    width: 1200px;
    height: 593px;
-   position: absolute;
+   
    background-color: rgb(250, 244, 244);
-   z-index: -1;
+ 
 }
 .search-filter { 
    display: -webkit-box; 
