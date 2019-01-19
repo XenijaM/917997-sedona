@@ -325,6 +325,25 @@ ul{
    background-repeat: no-repeat;
 }
 .advantages {
+   min-height: 256px;
+   width: 1200px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-flow: row nowrap;
+           flex-flow: row nowrap;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   background-color: #eeeeee;
+   -webkit-box-sizing: border-box;box-sizing: border-box;
+}
+.advantages-block {
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -341,11 +360,12 @@ ul{
    background-color: #eeeeee;
    -webkit-box-sizing: border-box;box-sizing: border-box;
    min-height: 256px;
+   width: 400px;
    
 }
 .square {
    -webkit-box-sizing: border-box;box-sizing: border-box;
-   width: 400px;
+   width: 208px;
    min-height: 143px;
    margin: 0;
    
@@ -353,7 +373,7 @@ ul{
 }
 .road {
    -webkit-box-sizing: border-box;box-sizing: border-box;
-   width: 400px;
+   width: 262px;
    min-height: 143px;
    margin: 0;
  
@@ -362,7 +382,7 @@ ul{
 }
 .tourist {
    -webkit-box-sizing: border-box;box-sizing: border-box;
-   width: 400px;
+   width: 250px;
    min-height: 142px;
    margin: 0;
    
@@ -377,7 +397,7 @@ ul{
    font-weight: bold;
    color: #000000;
    margin: 0;
-   margin-top: -8px;
+   margin-top: -12px;
 }
 .advantages-text {
    line-height: 21px;
@@ -385,6 +405,7 @@ ul{
    font-size: 14px;
    color:#333333;;
    margin: 0;
+   width: 
 }
 .advantages-number {
    line-height: 16px;
@@ -397,16 +418,19 @@ ul{
 .square-title {
    margin-bottom: 20px;
    color: #000000;
-   padding-right: 80px;
-   padding-left: 80px;
+
 }
 .road-title {
-   margin-bottom: 25px;
-   padding-left: 50px;
-   padding-right: 50px;
+  padding-left: 75px;
+   width: 120px;
+   margin-bottom: 20px;
+
 }
 .tourist-title {
-   margin-bottom: 21px;
+   padding-left: 65px;
+   width: 120px;
+   margin-bottom: 20px;
+
 }
 .interest-search {
    width: auto;
