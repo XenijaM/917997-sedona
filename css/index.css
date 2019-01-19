@@ -182,7 +182,6 @@ ul{
    background-color: #bfdbec;
    width: 400px; 
    min-height: 256px;
-   padding: 0;
 }
 .inside-box h3 {
    line-height: 21px;
@@ -192,6 +191,8 @@ ul{
    font-weight: bold;
    color: white;
    padding-top: 26px; 
+   padding-left: 120px;
+   padding-right: 120px;
 }
 .inside-box-number {
    line-height: 21px;
@@ -202,6 +203,8 @@ ul{
 }
 .inside-box-text {
    padding-top: 8px;
+   padding-right: 40px;
+   padding-left: 40px;
    text-align: center;
    line-height: 21px;
    font-size: 14px;
@@ -233,19 +236,19 @@ ul{
    background-color: white;
 }
 .house-item { 
-   min-width: 284px;
+   width: 400px;
    min-height: 320px;
    margin: auto;
    padding: auto;
 }
 .food-item {
-   min-width: 284px;
+   width: 400px;
    min-height: 320px;
    margin: auto;
    padding: auto;
 }
 .gift-item {
-   min-width: 284px;
+   width: 400px;
    min-height: 320px;
    margin: auto;
    padding: auto; 
@@ -275,6 +278,13 @@ ul{
    padding-top: 5px;
    background-color: white;
    color: #333333;
+   padding-right: 50px;
+   padding-left: 50px;
+}
+.icon-area-text-food {
+   padding-right: 50px;
+   padding-left: 50px;
+   
 }
 .icon-food {
    background-color: white;
@@ -331,35 +341,31 @@ ul{
    background-color: #eeeeee;
    -webkit-box-sizing: border-box;box-sizing: border-box;
    min-height: 256px;
-   padding-top: 50px;
-   padding-bottom: 61px;
+   
 }
 .square {
    -webkit-box-sizing: border-box;box-sizing: border-box;
-   width: 208px;
-   margin: 0;
-   margin-right: 87px;
-   margin-left: 95px;
+   width: 400px;
    min-height: 143px;
+   margin: 0;
+   
    background-color:#eeeeee;
 }
 .road {
    -webkit-box-sizing: border-box;box-sizing: border-box;
-   width: 272px;
+   width: 400px;
    min-height: 143px;
    margin: 0;
-   margin-right: 66px;
-   margin-left: 72px;
-   background-color:#eeeeee;
+ 
+   background-color: #eeeeee;
   
 }
 .tourist {
    -webkit-box-sizing: border-box;box-sizing: border-box;
-   width: 260px;
+   width: 400px;
    min-height: 142px;
    margin: 0;
-   margin-right: 69px;
-   margin-left: 72px;
+   
    background-color:#eeeeee;
 }
 .advantages-title {
@@ -391,9 +397,13 @@ ul{
 .square-title {
    margin-bottom: 20px;
    color: #000000;
+   padding-right: 80px;
+   padding-left: 80px;
 }
 .road-title {
    margin-bottom: 25px;
+   padding-left: 50px;
+   padding-right: 50px;
 }
 .tourist-title {
    margin-bottom: 21px;
@@ -442,11 +452,14 @@ ul{
 a :hover { 
    outline: 0;
 }
-
+.map-box {
+   width: 1200px;
+   height: 593px;
+}
 .search-button {
    position: absolute;
    left: calc(50% - 568px / 2);
-   bottom: 597px;
+   bottom: 625px;
    -webkit-box-sizing: border-box;
            box-sizing: border-box;
    width: 568px;
@@ -486,12 +499,25 @@ a :hover {
    0%  { -webkit-transform: translateY(-140px); transform: translateY(-140px); }
    100% { -webkit-transform: translateY(0); transform: translateY(0); }
  }
+ @keyframes shake {
+   0%, 100%      {-webkit-transform: translateX(0);-ms-transform: translateX(0);transform: translateX(0);}
+   10%, 50%, 90% {-webkit-transform: translateX(-10px);-ms-transform: translateX(-10px);transform: translateX(-10px);}
+   20%, 60%, 80% {-webkit-transform: translateX(10px);-ms-transform: translateX(10px);transform: translateX(10px);}
+ }
+
 .hotel-search-show {
    display: block;
    -webkit-animation-name: bounce;
            animation-name: bounce;
    -webkit-animation-duration: 0.1s;
            animation-duration: 0.1s;
+}
+.hotel-search-error {
+   display: block;
+   -webkit-animation-name: shake;
+           animation-name: shake;
+   -webkit-animation-duration: 0.6s;
+           animation-duration: 0.6s;
 }
 .search-form {
    -webkit-box-sizing: border-box;box-sizing: border-box; 
@@ -897,6 +923,7 @@ a {
  }
  .copyright {
     padding-right: 8px;
+    font-weight: normal;
     color: black;
     font-size: 14px;
     line-height: 26px;
@@ -915,13 +942,8 @@ footer {
    bottom: 0;
    width: 100%;
   }
-.map {
-   width: 1200px;
-   height: 593px;
-   position: absolute;
-   background-color: rgb(250, 244, 244);
-   z-index: -1;
-}
+  
+
 .search-filter { 
    display: -webkit-box; 
    display: -ms-flexbox; 
@@ -1190,16 +1212,17 @@ input[type="checkbox"]:disabled {
 .type:focus, .type:active {
    color: #000000;
 }
-.rating {
+.sorted-choice {
    font-size: 12px;
    border-bottom: 1px dotted #81b3d2;
    color: rgba(0, 0, 0, 0.3);
    margin-left: 10px;
 }
-.rating:hover, .rating:active {
+.sorted-choice:hover {
    color: #81b3d2;
 }
-.rating:focus {
+.sorted-choice:focus, 
+.sorted-choice:active {
    color: #000000;
 }
 hr {
@@ -1245,6 +1268,7 @@ hr {
    width: auto;
    padding-top: 40px;
    padding-bottom: 20px;
+   border-bottom: 1px solid grey;
 }
 .catalog-line-second {
    padding-top: 28px;
@@ -1407,6 +1431,10 @@ hr {
    text-align: center;
    padding-top: 10px;
    margin: 0;
+   margin-right: 5px;
+   margin-top: 4px;
+   padding-top: 4px;
+
 }
 .catalog-line div {
    height: 60px;

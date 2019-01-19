@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/index.min.css" rel="stylesheet">
-    <!---<style>
+    <link href="css/index.css" rel="stylesheet">
+    <style>
       HTML {
         background: url( 'img/sedona-index.jpg' ) 50% 0 no-repeat;
       }
       BODY {
     opacity: .4;
       }
-    </style>-->
+    </style>
   </head>
 
   <body class="main-body">
@@ -53,7 +53,7 @@
       <section class="center-section">
         <div class="true-city"> 
           <div class="inside-box">
-            <h3>Настоящий<br> городок</h3>
+            <h3>Настоящий городок</h3>
             <p class="inside-box-number"> — №1 — </p>
             <p class="inside-box-text">Седона - не аттракцион для туристов,<br> там течёт своя жизнь</p>
           </div>
@@ -63,17 +63,17 @@
         <div class="house-item"> 
           <div class="icon icon-house"></div>
           <h3 class="icon-area-title">Жильё</h3>
-          <p class="icon-area-text">Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p> 
+          <p class="icon-area-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p> 
         </div>
         <div class="food-item">
             <div class="icon icon-food"></div>  
             <h3 class="icon-area-title">Еда</h3>
-            <p class="icon-area-text">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
+            <p class="icon-area-text icon-area-text-food">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
         <div class="gift-item">
             <div class="icon icon-gift"></div>  
             <h3 class="icon-area-title">Сувениры</h3>
-            <p class="icon-area-text">Не только китайского, но и местного<br> производства!</p> 
+            <p class="icon-area-text icon-area-text-souvenir">Не только китайского, но и местного производства!</p> 
         </div>
       </div>
         <div class="devil-bridge">
@@ -81,7 +81,7 @@
             <div class="inside-box">
                 <h3>Там есть<br> Мост дьявола</h3>
                 <p class="inside-box-number"> — №2 — </p>
-                <p class="inside-box-text">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+                <p class="inside-box-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
              </div>
         </div>
         <div class="advantages">
@@ -91,12 +91,12 @@
               <p class="advantages-text square-text">Все достопримечательности находятся очень близко</p>
           </div>
           <div class="road">
-              <h3 class="advantages-title road-title">Красивая<br>дорога</h3>
+              <h3 class="advantages-title road-title">Красивая дорога</h3>
               <p class="advantages-number"> — №4 — </p>
               <p class="advantages-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
           <div class="tourist">
-              <h3 class="advantages-title tourist-title">Мало<br>туристов</h3>
+              <h3 class="advantages-title tourist-title">Мало туристов</h3>
               <p class="advantages-number"> — №5 — </p>
               <p class="advantages-text">Большинство едет в Гранд Каньон<br> и толпится там</p>
           </div>
@@ -110,9 +110,8 @@
               <p class="s-search">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             </div>        
         </div>
-
-       
-        <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;width=1200&amp;height=593&amp;lang=ru_RU&amp;scroll=true"></script>
+        
+          <p class="map-box"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;source=constructor" width="1200" height="593" frameborder="0"></iframe></p>
 
             <button type="button" class="search-button">
               Поиск гостиницы в Седоне
@@ -162,30 +161,66 @@
     <p><a href="#" aria-label="#" class="visit">#VISITSEDONA</a></p>
     <ul class="footer-social">
       <li class="social social-tw" >
-        <a href="#" aria-label="ссылка ведет к странице Седоны в твиттер"></a>
+        <a href="#" aria-label="ссылка ведет к странице Седоны в твиттер">
           <span class="visually-hidden">Твиттер</span>
           <img src="img/twitter-icon.svg" width="17" height="15" alt="иконка твиттера">
+        </a>
       </li>
       <li class="social social-fb">
-        <a href="#" aria-label="ссылка ведет к странице Седоны в фейсбук"></a>
+        <a href="#" aria-label="ссылка ведет к странице Седоны в фейсбук">
           <span class="visually-hidden">Фейсбук</span>
           <img src="img/fb-icon.svg" width="12" height="22" alt="иконка фейсбук">
+        </a>
       </li>
       <li class="social social-yt" >
-        <a href="#" aria-label="ссылка ведет к странице Седоны на ютьюб"></a>
+        <a href="#" aria-label="ссылка ведет к странице Седоны на ютьюб">
           <span class="visually-hidden">Ютьюб</span>
           <img src="img/utube-icon.svg" width="20" height="16" alt="иконка ютуб">
+        </a>
       </li>
     </ul>
     <div class="footer-copyright">
-      <a href="#" class="copyright">Website by</a>
-      <p></p>
+      <span class="copyright">Website by</span>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="ссылка ведёт на страницу HTML академии">
+        <p></p>
+      </a>
     </div>
   </footer>
   
-  <script src="../js/script.min.js"></script>
+  <!---<script src="../js/script.min.js"></script>-->
   <!--Прописанный в html скрипт - временное решение, т.к. почему-то подключённый выше не работает.-->
-  <script>var button=document.querySelector(".search-button");var popup=document.querySelector(".hotel-search");var arrival=popup.querySelector("[name=arrival]");var departure=popup.querySelector("[name=departure]");var form=popup.querySelector("form");button.addEventListener("click",function(evt){evt.preventDefault();popup.classList.toggle("hotel-search-show");arrival.focus()});form.addEventListener("submit",function(evt){if(!arrival.value||!departure.value){evt.preventDefault()}});window.addEventListener("keydown",function(evt){if(evt.keyCode===27){if(popup.classList.contains("hotel-search-show")){evt.preventDefault();popup.classList.remove("hotel-search-show")}}});</script>
+  <script>
+    var button = document.querySelector(".search-button");
+    var popup = document.querySelector(".hotel-search");
+    var arrival = popup.querySelector("[name=arrival]");
+    var departure = popup.querySelector("[name=departure]");
+    var form = popup.querySelector("form");
+
+   
+
+    button.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.toggle("hotel-search-show");
+      arrival.focus();
+    });
+
+    form.addEventListener("submit", function (evt) {
+        if (!arrival.value || !departure.value) {
+        evt.preventDefault();
+        popup.classList.add("hotel-search-error");
+        }
+    });
+    window.addEventListener("keydown", function (evt){
+      if (evt.keyCode === 27){
+        if (popup.classList.contains ("hotel-search-show")) {
+          evt.preventDefault();
+          popup.classList.remove("hotel-search-show");
+        }
+      }
+    });
+
+    
+  </script>
   
 </body>
 </html>

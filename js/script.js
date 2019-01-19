@@ -5,6 +5,8 @@
     var departure = popup.querySelector("[name=departure]");
     var form = popup.querySelector("form");
 
+    var submitButton = document.querySelector (".btn-transparent");
+
     button.addEventListener("click", function (evt) {
       evt.preventDefault();
       popup.classList.toggle("hotel-search-show");
@@ -25,4 +27,6 @@
         }
       }
     });
+    submitButton.addEventListener("click", sendForm);
+    console,log("отправка формы")
   </script>

@@ -5,14 +5,14 @@
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <style>
+    <!---<style>
       HTML {
         background: url( 'img/sedona-hotels.jpg' ) 50% 0 no-repeat;
       }
       BODY {
     opacity: .4;
       }
-    </style>
+    </style>-->
   </head>
   <body>
     <div class="body-class">
@@ -39,7 +39,7 @@
       </header>
     <main class="container">
       <h1 class="visually-hidden">Поиск подходящего жилья</h1>
-      <section class="search-filter">
+      <form class="search-filter">
         <h2 class="visually-hidden">Отсортируем подхожящее жильё</h2>
         <ul class="unfrastructure">
           <li class="search-titel">Инфраструктура:</li>
@@ -74,7 +74,7 @@
         <div class="filter-range">
             <div class="filter-range-title">Стоимость в сутки (р):</div>
             <div class="price-controls">
-              <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+              <label class="min-price">от <input type="text" name="min-price" value="1"></label>
               <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
             </div>
             <div class="range-controls">
@@ -84,15 +84,21 @@
               <div class="range-toggle range-toggle-min"></div>
               <div class="range-toggle range-toggle-max"></div>
             </div>
-            <button class="btn-transparent" type="submit">Показать</button>
+            <button class="btn-transparent" type="submit" value="Показать" id="submitButton">Показать</button>
           </div>
-      </section>
+        </form>
       <div class="search-result">
         <h2>Найдено: 3</h2>
         <p class="sorted">Сортировка:</p>
-        <p class="price">По цене</p>
-        <p class="type">По типу</p>
-        <p class="rating">По рейтингу</p>
+        <a href="#">
+          <p class="sorted-choice">По цене</p>
+        </a>
+        <a href="#">
+          <p class="sorted-choice">По типу</p>
+        </a>
+        <a href="#">
+          <p class="sorted-choice">По рейтингу</p>
+        </a>
         <div class="up"></div>
         <div class="down"></div>
       </div>
@@ -121,7 +127,7 @@
             </div>
             <p class="rate">Рейтинг: 8,5</p></div>
         </div>
-        <hr>
+        
         <div class="catalog-line catalog-line-second">
           <div><img src="img/img-hotels/hotel3.jpg" width="135" height="90" alt="фото мотеля"></div>
           <div class="central-block">
@@ -143,7 +149,7 @@
             </div>
             <p class="rate">Рейтинг: 8,9</p></div>
         </div>
-        <hr>
+        
         <div class="catalog-line catalog-line-third">
           <div><img src="img/img-hotels/hotel2.jpg"     width="135" height="90" alt="фото апартаментов"></div>
           <div class="central-block">
@@ -164,33 +170,69 @@
             </div>
             <p class="rate">Рейтинг: 9,2</p></div>
         </div>
-        <hr>
+        
       </section>
     </main>
     <footer class="main-footer">
         <p><a href="#" aria-label="#" class="visit">#VISITSEDONA</a></p>
         <ul class="footer-social">
           <li class="social social-tw" >
-            <a href="#" aria-label="ссылка ведет к странице Седоны в твиттер"></a>
+            <a href="#" aria-label="ссылка ведет к странице Седоны в твиттер">
               <span class="visually-hidden">Твиттер</span>
               <img src="img/twitter-icon.svg" width="17" height="15" alt="иконка твиттера">
+            </a>
           </li>
           <li class="social social-fb">
-            <a href="#" aria-label="ссылка ведет к странице Седоны в фейсбук"></a>
+            <a href="#" aria-label="ссылка ведет к странице Седоны в фейсбук">
               <span class="visually-hidden">Фейсбук</span>
               <img src="img/fb-icon.svg" width="12" height="22" alt="иконка фейсбук">
+            </a>
           </li>
           <li class="social social-yt" >
-            <a href="#" aria-label="ссылка ведет к странице Седоны на ютьюб"></a>
+            <a href="#" aria-label="ссылка ведет к странице Седоны на ютьюб">
               <span class="visually-hidden">Ютьюб</span>
               <img src="img/utube-icon.svg" width="20" height="16" alt="иконка ютуб">
+            </a>
           </li>
         </ul>
         <div class="footer-copyright">
-          <a href="#" class="copyright">Website by</a>
-          <p></p>
+          <span class="copyright">Website by</span>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="ссылка ведёт на страницу HTML академии">
+            <p></p>
+          </a>
         </div>
       </footer>
     </div>
+    <!---<script src="../js/script.min.js"></script>-->
+  <!--Прописанный в html скрипт - временное решение, т.к. почему-то подключённый выше не работает.-->
+  <script>
+    var button = document.querySelector(".search-button");
+    var popup = document.querySelector(".hotel-search");
+    var arrival = popup.querySelector("[name=arrival]");
+    var departure = popup.querySelector("[name=departure]");
+    var form = popup.querySelector("form");
+
+    button.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.toggle("hotel-search-show");
+      arrival.focus();
+    });
+
+    form.addEventListener("submit", function (evt) {
+        if (!arrival.value || !departure.value) {
+        evt.preventDefault();
+        popup.classList.add("hotel-search-error");
+        }
+    });
+    window.addEventListener("keydown", function (evt){
+      if (evt.keyCode === 27){
+        if (popup.classList.contains ("hotel-search-show")) {
+          evt.preventDefault();
+          popup.classList.remove("hotel-search-show");
+        }
+      }
+    });
+
+  </script>
   </body>
 </html>
