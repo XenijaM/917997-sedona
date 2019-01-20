@@ -4,17 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-    <!---<style>
-      HTML {
-        background: url( 'img/sedona-index.jpg' ) 50% 0 no-repeat;
-      }
-      BODY {
-    opacity: .4;
-      }
-    </style>-->
+    <link href="css/index.min.css" rel="stylesheet">
   </head>
-
   <body class="main-body">
     <div class="body-class">
       <header class="main-header">
@@ -111,25 +102,15 @@
       <div>
         <div class="interest-search">
           <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
-            <div class="search">
-              <p class="s-interest">Заинтересовались? </p>
-              <p class="s-search">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            </div>        
+              <div class="s-interest">Заинтересовались? </div>
+              <div class="s-search">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</div>     
         </div>
       </div>
-
-        <section class="map-section">
-          <h2 class="visually-hidden">Где находится Седона</h2>
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;source=constructor" width="1200" height="593"></iframe>
-          <p class="map-box">
-            <img src="img/img-index/map.jpg" width="1200" height="593" alt="Карта местоположения Седоны">
-          </p>
-        </section>
-
-            <button type="button" class="search-button">
-              Поиск гостиницы в Седоне
-            </button>
+          <button type="button" class="search-button">
+          Поиск гостиницы в Седоне
+           </button>
           <form class="hotel-search hotel-search-show" action="https://sedona.com" method="post">
+            
              <fieldset class="search-form">
                   <div class="search-block ar-date">
                     <label for="arrival-date">
@@ -168,7 +149,12 @@
                 <button type="submit" class="search-b">Найти</button>
                 </fieldset>
           </form>
-      
+
+          <section class="map-section">
+            <h2 class="visually-hidden">Где находится Седона</h2>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;source=constructor" width="1200" height="593"></iframe>
+          </section>
+
     <footer class="main-footer">
       <p><a href="#" aria-label="#" class="visit">#VISITSEDONA</a></p>
       <ul class="footer-social">
@@ -198,41 +184,7 @@
       </a>
     </div>
   </footer>
-  
-  <!---<script src="../js/script.min.js"></script>-->
-  <!--Прописанный в html скрипт - временное решение, т.к. почему-то подключённый выше не работает.-->
-  <script>
-    var button = document.querySelector(".search-button");
-    var popup = document.querySelector(".hotel-search");
-    var arrival = popup.querySelector("[name=arrival]");
-    var departure = popup.querySelector("[name=departure]");
-    var form = popup.querySelector("form");
-
-   
-
-    button.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.toggle("hotel-search-show");
-      arrival.focus();
-    });
-
-    form.addEventListener("submit", function (evt) {
-        if (!arrival.value || !departure.value) {
-        evt.preventDefault();
-        popup.classList.add("hotel-search-error");
-        }
-    });
-    window.addEventListener("keydown", function (evt){
-      if (evt.keyCode === 27){
-        if (popup.classList.contains ("hotel-search-show")) {
-          evt.preventDefault();
-          popup.classList.remove("hotel-search-show");
-        }
-      }
-    });
-
-    
-  </script>
+  <script src="js/script.min.js"></script>
   </div>
 </body>
 </html>

@@ -24,7 +24,7 @@ body {
    background-size: 100%;
    height: 509px;
    -webkit-box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-   margin-top: -20px;
+   margin-top: -16px;
 }
 .site-navigation {
    display: -webkit-box;
@@ -63,11 +63,11 @@ body {
 .img-polygon { 
    width: auto;
    background-color: transparent;
-   margin-top: -53px;
+   margin-top: -58px;
 }
 .sedona-deserves {
    min-height: 100px;
-   padding: 60px 355px 50px;
+   padding: 60px 355px 55px;
    margin: 0;
    margin-top: -5px;
    background-color: white;
@@ -75,9 +75,9 @@ body {
 }
 .s-deserves {
    display: block;
-   width: 440px;
    min-height: 48px;
-   margin-top: 0 25px 35px 25px;
+   margin: 0;
+   margin-bottom: 35px;
    padding: 0;
    font-family: "PT Sans", Arial, sans-serif;
    font-size: 21px;
@@ -142,6 +142,7 @@ body {
            align-items: stretch;
    -ms-flex-line-pack: stretch;
        align-content: stretch;
+   -webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;
    width: 100%;
    margin: 0; 
    list-style: none;
@@ -419,25 +420,26 @@ body {
 
 }
 .interest-search {
-   width: auto;
-   height: 291px;
-   margin-top: 0;
+   -webkit-box-sizing: border-box;box-sizing: border-box;
+   width: 1200px;
+   min-height: 291px;
+   margin-top: -5px;
+   padding: 60px 383px 125px 383px;
    background-color: white;
    -webkit-box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 }
 .search {
    width: 450px;
-   height: 96px;
-   margin-left: auto;
-   margin-right: auto;
-   padding-top: 27px;
+   min-height: 96px;
+   margin: 0;
+   padding: 0;
    background-color: white;
 }
 .s-interest {
    width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-   margin-bottom: 30px;
+   margin: 0;
+   padding: 0;
+   padding-bottom: 30px;
    font-size: 30px;
    color: black;
    font-style: normal;
@@ -460,18 +462,15 @@ a :hover {
    outline: 0;
 }
 .map-section {
-   position: absolute;
    z-index: 1;
-  
    bottom: 0;
    left: calc(50% - 1200px / 2);
    width: 1200px;
    height: 593px;
+   background-image: url("img/img-index/map.jpg");
 }
 .map-section p {
-   position: absolute;
    z-index: 1;
-
    bottom: 0;
    left: calc(50% - 1200px / 2);
    width: 1200px;
@@ -481,15 +480,15 @@ a :hover {
    position: relative;
    z-index: 5;
    left: calc(50% - 1200px / 2);
-  
    bottom: 0;
    width: 1200px;
    height: 593px;
+   border: none;
 }
 .search-button {
    position: absolute;
    left: calc(50% - 568px / 2);
-   bottom: 625px;
+   bottom: 590px;
    -webkit-box-sizing: border-box;
            box-sizing: border-box;
    width: 568px;
@@ -502,7 +501,7 @@ a :hover {
    font-size:21px;
    font-weight: bold;
    text-transform: uppercase;
-   z-index: 1;
+   z-index: 3;
 }
 .search-button:hover {
    background-color: #604e43;
@@ -516,7 +515,7 @@ a :hover {
    position: absolute;
    z-index: 20;
    display: none;
-   bottom: 120px;
+   bottom: 110px;
    left: calc(50% - 568px / 2);
    width: 568px;
    min-height: 481px;
@@ -593,8 +592,8 @@ a :hover {
    width: 38px;
 }
 .ar-date{
-   margin-bottom: 31px;
-   margin-top: 10px;
+   margin-bottom: 33px;
+   margin-top: 4px;
 }
 .dep-date {
    margin-bottom: 33px;
@@ -663,8 +662,8 @@ a :hover {
    width: 75px;
 }
 .margin-three {
-   margin-left: 17px;
-   margin-right: 18px;
+   margin-left: 10px;
+   margin-right: 25px;
    width: 40px;
 }
 
@@ -845,6 +844,7 @@ a {
 }
 
 .main-footer { 
+   position: absolute;
    z-index: 350;
    display: -webkit-box; 
    display: -ms-flexbox; 
@@ -983,7 +983,7 @@ html {
   }
 footer {
    height: 120px; 
-   position: absolute;
+   
    bottom: 0;
    width: 100%;
 }
@@ -1363,7 +1363,7 @@ hr {
    height: 25px;
    background-color:#81b3d2;
    margin-right: 5px;
-   margin-top: 8px;
+   margin-top: 10px;
    padding-top: 4px;
    text-align: center;
 }
@@ -1385,7 +1385,7 @@ hr {
    text-transform: uppercase;
    border: none;
    margin-right: 5px;
-   margin-top: 8px;
+   margin-top: 10px;
    padding-top: 4px;
    text-align: center;
 }
@@ -1408,6 +1408,7 @@ hr {
    font-size: 21px;
    font-weight: bold;
    color: #000000;
+   margin-top: -3px;
 }
 .central-block h3:hover {
    color: #81b3d2;
@@ -1456,9 +1457,8 @@ hr {
 }
 .star {
    width: 20px;
-   margin-right: 0;
+   margin: 0;
    margin-left: 5px;
-   margin-top: 3px;
    padding: 0px;
    height: 17px;
    background-color: white;
