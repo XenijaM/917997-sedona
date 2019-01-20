@@ -5,38 +5,40 @@
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <!---<style>
+    <style>
       HTML {
         background: url( 'img/sedona-hotels.jpg' ) 50% 0 no-repeat;
       }
       BODY {
     opacity: .4;
       }
-    </style>-->
+    </style>
   </head>
   <body>
     <div class="body-class">
-      <header class="main-header">
-          <ul class="site-navigation">
-             <li>
-               <a href="#" aria-label="ссылка ведет к блоку информация" class="li-center">Информация</a>
-              </li>
-             <li>
-               <a href="#" aria-label="ссылка ведет к фото и видео" class="li-center">Фото и видео</a>
-             </li>
-             <li>
-               <a href="index.html" class="main-header-logo">
-                 <img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona">
-                </a>
-             </li>
-             <li>
-               <a href="#" aria-label="ссылка ведет к карте штата" class="li-center">Карта штата</a>
-             </li>
-             <li>
-               <a href="#" aria-label="ссылка ведет к списку гостиниц" class="li-center">Гостиницы</a>
-             </li>
-          </ul>
-      </header>
+        <header class="main-header">
+            <ul class="site-navigation">
+               <li class="navigation-item item-info">
+                 <a href="#" aria-label="ссылка ведет к блоку информация" class="li-center">Информация</a>
+                </li>
+               <li class="navigation-item item-photo">
+                 <a href="#" aria-label="ссылка ведет к фото и видео" class="li-center">Фото и видео</a>
+               </li>
+               
+               <li class="navigation-item item-map">
+                 <a href="#" aria-label="ссылка ведет к карте штата" class="li-center">Карта штата</a>
+               </li>
+               <li class="navigation-item item-hostelslist">
+                 <a href="inner.html" aria-label="ссылка ведет к списку гостиниц" class="li-center li-center-hotel">Гостиницы</a>
+               </li>
+            </ul>
+        </header>
+        
+        <div class="logo-block">
+          <a href="index.html" class="main-header-logo">
+          <img src="img/main.logo.svg" width="140" height="71" alt="лого Седоны">
+          </a>
+        </div>
     <main class="container">
       <h1 class="visually-hidden">Поиск подходящего жилья</h1>
       <form class="search-filter">

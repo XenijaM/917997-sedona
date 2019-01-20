@@ -5,40 +5,41 @@
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <style>
+    <!---<style>
       HTML {
         background: url( 'img/sedona-index.jpg' ) 50% 0 no-repeat;
       }
       BODY {
     opacity: .4;
       }
-    </style>
+    </style>-->
   </head>
 
   <body class="main-body">
     <div class="body-class">
       <header class="main-header">
           <ul class="site-navigation">
-             <li>
+             <li class="navigation-item item-info">
                <a href="#" aria-label="ссылка ведет к блоку информация" class="li-center">Информация</a>
               </li>
-             <li>
+             <li class="navigation-item item-photo">
                <a href="#" aria-label="ссылка ведет к фото и видео" class="li-center">Фото и видео</a>
              </li>
-             <li class="logo-block">
-               <a href="#" class="main-header-logo">
-                 <img src="img/main.logo.svg" width="140" height="71" alt="лого City of Sedona">
-                </a>
-             </li>
-             <li>
+             
+             <li class="navigation-item item-map">
                <a href="#" aria-label="ссылка ведет к карте штата" class="li-center">Карта штата</a>
              </li>
-             <li>
-               <a href="inner.html" aria-label="ссылка ведет к списку гостиниц" class="li-center li-center-hotel">Гостиницы</a>
+             <li class="navigation-item item-hostelslist">
+               <a href="inner.html" aria-label="ссылка ведет к списку гостиниц" class="li-center li-center-nohotel">Гостиницы</a>
              </li>
           </ul>
       </header>
-      
+      <div class="logo-block">
+        <a href="index.html" class="main-header-logo">
+        <img src="img/main.logo.svg" width="140" height="71" alt="лого Седоны">
+        </a>
+      </div>
+
       <div class="section-welcome">
          <h1 class="visually-hidden">ДОБРО ПОЖАЛОВАТЬ В СЕДОНУ</h1>
          <div class="welcome-img"><img src="img/img-index/welcome.png" width="459" height="353" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks"></div>
@@ -50,30 +51,30 @@
           <p class="s-deserves">Седона — небольшой городок в Аризоне, заслуживающий большего!</p> 
           <p class="s-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
-      <section class="center-section">
+      <div class="center-section">
         <div class="true-city"> 
           <div class="inside-box">
             <h3>Настоящий городок</h3>
             <p class="inside-box-number"> — №1 — </p>
-            <p class="inside-box-text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            <p class="inside-box-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <div class="img-1"></div>
-          </div>
-      <div class="icon-area">
+        </div>
+        <div class="icon-area">
         <div class="house-item"> 
           <div class="icon icon-house"></div>
           <h3 class="icon-area-title">Жильё</h3>
           <p class="icon-area-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p> 
         </div>
         <div class="food-item">
-            <div class="icon icon-food"></div>  
-            <h3 class="icon-area-title">Еда</h3>
-            <p class="icon-area-text icon-area-text-food">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <div class="icon icon-food"></div>  
+          <h3 class="icon-area-title">Еда</h3>
+          <p class="icon-area-text icon-area-text-food">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </div>
         <div class="gift-item">
-            <div class="icon icon-gift"></div>  
-            <h3 class="icon-area-title">Сувениры</h3>
-            <p class="icon-area-text icon-area-text-souvenir">Не только китайского, но и местного производства!</p> 
+          <div class="icon icon-gift"></div>  
+          <h3 class="icon-area-title">Сувениры</h3>
+          <p class="icon-area-text icon-area-text-souvenir">Не только китайского, но и местного производства!</p> 
         </div>
       </div>
         <div class="devil-bridge">
@@ -107,7 +108,7 @@
           </div>
         </div>
       </div>
-      <section>
+      <div>
         <div class="interest-search">
           <h2 class="visually-hidden">Найти гостиницу в Седоне</h2>
             <div class="search">
@@ -115,8 +116,15 @@
               <p class="s-search">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
             </div>        
         </div>
-        
-          <p class="map-box"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;source=constructor" width="1200" height="593" frameborder="0"></iframe></p>
+      </div>
+
+        <section class="map-section">
+          <h2 class="visually-hidden">Где находится Седона</h2>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4c2fa0e8626959fcfffe32949a7038c82f4b150ed761a75cc5f1b1c86124f73&amp;source=constructor" width="1200" height="593"></iframe>
+          <p class="map-box">
+            <img src="img/img-index/map.jpg" width="1200" height="593" alt="Карта местоположения Седоны">
+          </p>
+        </section>
 
             <button type="button" class="search-button">
               Поиск гостиницы в Седоне
@@ -157,16 +165,15 @@
                       </div>
                     </div>
                  </div>
-                  <button type="submit" class="search-b">Найти</button>
-        </fieldset>
-      </form>
-      </section>
+                <button type="submit" class="search-b">Найти</button>
+                </fieldset>
+          </form>
       
-  <footer class="main-footer">
-    <p><a href="#" aria-label="#" class="visit">#VISITSEDONA</a></p>
-    <ul class="footer-social">
-      <li class="social social-tw" >
-        <a href="#" aria-label="ссылка ведет к странице Седоны в твиттер">
+    <footer class="main-footer">
+      <p><a href="#" aria-label="#" class="visit">#VISITSEDONA</a></p>
+      <ul class="footer-social">
+        <li class="social social-tw" >
+         <a href="#" aria-label="ссылка ведет к странице Седоны в твиттер">
           <span class="visually-hidden">Твиттер</span>
           <img src="img/twitter-icon.svg" width="17" height="15" alt="иконка твиттера">
         </a>
@@ -226,6 +233,6 @@
 
     
   </script>
-  
+  </div>
 </body>
 </html>
