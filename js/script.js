@@ -11,6 +11,8 @@ var form = popup.querySelector("form");
  form.addEventListener("submit", function (evt) {
    if (!arrival.value || !departure.value) {
       evt.preventDefault();
+      popup.classList.remove("hotel-search-error");
+      popup.offsetWidth = popup.offsetWidth;
       popup.classList.add("hotel-search-error");
       }
     });
@@ -20,6 +22,7 @@ var form = popup.querySelector("form");
    if (popup.classList.contains ("hotel-search-show")) {
         evt.preventDefault();
         popup.classList.remove("hotel-search-show");
+        popup.classList.remove("hotel-search-error");
       }
     }
 });
